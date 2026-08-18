@@ -1,0 +1,637 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><meta name='robots' content='noindex,nofollow,noarchive,nosnippet'><meta name='googlebot' content='noindex,nofollow'><meta name='description' content='Private proposal document.'><title>Renvir · Proposal · August 2026</title><link href='https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Oswald:wght@200;300;400;500;700&display=swap' rel='stylesheet'><style>
+:root{--bg:#0a0a0a;--surface:#101010;--s2:#0d0d0d;--line:rgba(255,255,255,.10);--line2:rgba(255,255,255,.06);
+--ink:#f2f2f2;--ink2:#a8a8a8;--ink3:#7a7a7a;--tungsten:#E8B980;--steel:#6E7175}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:300;
+ -webkit-font-smoothing:antialiased;padding:0 36px 120px}
+.wrap{max-width:1320px;margin:0 auto}
+.osw{font-family:'Oswald',sans-serif}
+/* cover */
+.cover{min-height:82vh;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid var(--line);padding:90px 0 70px}
+.cover h1{font-family:'Oswald',sans-serif;font-weight:200;font-size:86px;letter-spacing:.045em;text-transform:uppercase;line-height:1}
+.cover h1 b{font-weight:500}
+.cover .k{font-size:13px;letter-spacing:.34em;text-transform:uppercase;color:var(--tungsten);margin-bottom:26px}
+.cover .m{font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink3);margin-top:34px}
+.cover .lead{font-size:19px;line-height:1.7;color:var(--ink2);max-width:730px;margin-top:34px}
+.cover .lead b{color:var(--ink);font-weight:400}
+/* sections */
+section{padding:72px 0 8px;border-bottom:1px solid var(--line2)}
+.num{font-family:'Oswald',sans-serif;font-weight:200;font-size:15px;letter-spacing:.34em;color:var(--tungsten);margin-bottom:14px}
+h2{font-family:'Oswald',sans-serif;font-weight:200;font-size:46px;letter-spacing:.03em;text-transform:uppercase;line-height:1.06;margin-bottom:30px}
+h2 b{font-weight:500}
+h3{font-family:'Oswald',sans-serif;font-weight:300;font-size:15px;letter-spacing:.32em;text-transform:uppercase;
+ color:var(--ink3);padding-bottom:14px;border-bottom:1px solid var(--line);margin:44px 0 26px}
+p{font-size:16.5px;line-height:1.74;color:var(--ink2);max-width:880px;margin-bottom:20px}
+p b{color:var(--ink);font-weight:400}
+.big{font-family:'Oswald',sans-serif;font-weight:200;font-size:36px;line-height:1.28;text-transform:uppercase;
+ letter-spacing:.02em;color:var(--ink)}
+.big b{font-weight:500}
+.pull{background:var(--surface);border-left:2px solid var(--tungsten);padding:34px 36px;margin:30px 0}
+.pull p:last-child{margin-bottom:0}
+ul{list-style:none;margin-bottom:22px;max-width:880px}
+li{font-size:16px;line-height:1.6;color:var(--ink2);padding:9px 0 9px 18px;position:relative}
+li::before{content:"";position:absolute;left:0;top:18px;width:7px;height:1px;background:var(--tungsten)}
+li b{color:var(--ink);font-weight:400}
+table{width:100%;border-collapse:collapse;margin:6px 0 26px}
+th{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);font-weight:400;text-align:right;
+ padding:0 0 14px;border-bottom:1px solid var(--line)}
+th:first-child{text-align:left}
+td{font-size:15.5px;color:var(--ink2);padding:15px 0;border-bottom:1px solid var(--line2);text-align:right}
+td:first-child{text-align:left;color:var(--ink)}
+td.n{font-family:'Oswald',sans-serif;font-weight:300;font-size:19px}
+tr.tot td{border-bottom:0;border-top:1px solid var(--line);padding-top:19px;color:var(--ink)}
+tr.tot td.n{font-weight:500;font-size:26px}
+.you{color:var(--tungsten)!important}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2px;background:var(--line2);margin:26px 0}
+.stat{background:var(--surface);padding:28px 22px}
+.stat .v{font-family:'Oswald',sans-serif;font-weight:200;font-size:54px;line-height:1;color:var(--tungsten)}
+.stat .l{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin-top:12px;line-height:1.6}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line2);margin:26px 0}
+.grid2>div{background:var(--surface);padding:30px 28px}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2px;background:var(--line2);margin:26px 0}
+.grid4>div{background:var(--surface);padding:30px 26px}
+.grid4 h4,.grid2 h4{font-family:'Oswald',sans-serif;font-weight:500;font-size:19px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}
+.cap{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--tungsten);margin-bottom:16px}
+.worlds{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+.worlds span{font-family:'Oswald',sans-serif;font-weight:400;font-size:19px;letter-spacing:.16em;text-transform:uppercase;
+ color:var(--bg);background:var(--tungsten);padding:10px 20px}
+.row{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;margin:24px 0}
+figure{background:var(--surface);border:1px solid var(--line2)}
+figure img{display:block;width:100%}
+figcaption{padding:13px 14px 16px}
+.fl{font-family:'Oswald',sans-serif;font-weight:400;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
+.fd{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);margin-top:5px}
+/* video */
+.phone{width:352px;flex:0 0 352px;background:#000;border:1px solid rgba(255,255,255,.16);overflow:hidden;position:relative}
+.phone video{display:block;width:100%;background:#000}
+.phlab{display:flex;align-items:center;padding:11px 13px;background:#0d0d0d;border-top:1px solid rgba(255,255,255,.09)}
+.phlab .t{font-family:'Oswald',sans-serif;font-weight:400;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+.phlab .d{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-left:auto}
+/* ig ad */
+.ig{width:430px;flex:0 0 430px;background:#000;border:1px solid rgba(255,255,255,.13)}
+.ighead{display:flex;align-items:center;gap:10px;padding:11px 12px}
+.igav{width:34px;height:34px;border-radius:50%;background-size:cover;flex:0 0 34px;box-shadow:0 0 0 1.5px #000,0 0 0 3px #d9a441}
+.ignm{font-size:13.5px;font-weight:500;color:#fff}.igsp{font-size:12px;color:#a8a8a8}
+.igdots{margin-left:auto;color:#fff;opacity:.85;letter-spacing:1px}
+.igmedia{position:relative;overflow:hidden;background:#000;width:430px;height:537px}
+.igtrack{display:flex;gap:5px;transition:transform .38s cubic-bezier(.22,.61,.36,1)}
+.igtrack img{display:block;width:404px;height:505px;object-fit:cover;flex:0 0 404px}
+.ignav{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;
+ background:rgba(255,255,255,.9);color:#262626;border:0;cursor:pointer;font-size:16px;z-index:3;
+ display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,.3)}
+.ignav:disabled{opacity:0;pointer-events:none}
+.ignav.p{left:9px}.ignav.n{right:9px}
+.igcount{position:absolute;top:11px;right:11px;background:rgba(0,0,0,.62);color:#fff;font-size:12.5px;
+ font-weight:500;padding:4px 10px;border-radius:12px}
+.igcta{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:#1c1c1e;border-top:1px solid rgba(255,255,255,.08)}
+.igcta .l{font-size:14px;font-weight:500;color:#fff}.igcta .s{font-size:12px;color:#9a9a9a;margin-top:2px}
+.igcta .c{color:#8e8e93;font-size:19px}
+.igact{display:flex;align-items:center;gap:16px;padding:11px 13px 6px}
+.igact svg{width:23px;height:23px;stroke:#fff;fill:none;stroke-width:1.7}
+.igact .sp{margin-left:auto}
+.igdotrow{display:flex;justify-content:center;gap:5px;padding:2px 0 8px}
+.igdotrow i{width:6px;height:6px;border-radius:50%;background:#3a3a3c;display:block;cursor:pointer}
+.igdotrow i.on{background:#0a84ff}
+.iglikes{padding:0 13px 6px;font-size:13.5px;font-weight:600;color:#fff}
+.igcap{padding:2px 13px 14px;font-size:13.5px;line-height:1.45;color:#e6e6e6}
+.igcap b{font-weight:600;color:#fff}.igcap .m{color:#8e8e93}
+.side{flex:1;min-width:320px}
+.timeline{border-left:1px solid var(--line);padding-left:32px;margin:26px 0}
+.tl{position:relative;padding-bottom:38px}
+.tl::before{content:"";position:absolute;left:-38px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--tungsten)}
+.tl.chk::before{background:var(--bg);border:2px solid var(--tungsten)}
+.tl h4{font-family:'Oswald',sans-serif;font-weight:500;font-size:22px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+.tl .w{font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--tungsten);margin-bottom:12px}
+.hero{background:var(--surface);border:1px solid var(--line);padding:46px 40px;text-align:center;margin:34px 0}
+.hero .k{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink3)}
+.hero .v{font-family:'Oswald',sans-serif;font-weight:200;font-size:86px;line-height:1.04;margin:16px 0 14px;color:var(--tungsten)}
+.hero p{max-width:700px;margin:0 auto;font-size:16px}
+.sign{margin-top:52px;font-family:'Oswald',sans-serif;font-weight:300;font-size:24px;letter-spacing:.24em;text-transform:uppercase}
+
+.vault{border:1px solid var(--tungsten);margin:30px 0 18px;background:linear-gradient(180deg,rgba(232,185,128,.045),transparent 320px)}
+.vaulthead{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;padding:26px 30px 24px;border-bottom:1px solid rgba(232,185,128,.3)}
+.vaulthead .t{font-family:'Oswald',sans-serif;font-weight:500;font-size:22px;letter-spacing:.2em;text-transform:uppercase;color:var(--tungsten)}
+.vaulthead .p{font-family:'Oswald',sans-serif;font-weight:200;font-size:34px;color:var(--ink);letter-spacing:.02em;margin-left:auto}
+.vaulthead .p small{font-size:14px;color:var(--ink3);letter-spacing:.16em;text-transform:uppercase;font-family:'Inter',sans-serif;font-weight:300}
+.vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(232,185,128,.16)}
+@media(max-width:1000px){.vgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.vgrid{grid-template-columns:1fr}}
+.vg{background:var(--bg);padding:26px 24px 28px}
+.vg .n{font-family:'Oswald',sans-serif;font-weight:200;font-size:13px;letter-spacing:.3em;color:var(--tungsten);margin-bottom:10px}
+.vg h4{font-family:'Oswald',sans-serif;font-weight:500;font-size:19px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px}
+.vg .q{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tungsten);margin-bottom:14px}
+.vg ul{margin:0}
+.vg li{font-size:14px;line-height:1.5;padding:5px 0 5px 14px;color:var(--ink2)}
+.vg li::before{top:13px;width:5px;background:rgba(232,185,128,.55)}
+.outside{border:1px solid var(--line);margin:0 0 26px;display:flex;flex-wrap:wrap;align-items:center;gap:24px;padding:26px 30px;background:var(--s2)}
+.outside .t{font-family:'Oswald',sans-serif;font-weight:500;font-size:18px;letter-spacing:.2em;text-transform:uppercase;color:var(--steel)}
+.outside p{margin:0;flex:1;min-width:280px;font-size:15px}
+
+
+.caveat{border:1px solid var(--steel);background:rgba(110,113,117,.09);padding:26px 30px;margin:8px 0 30px}
+.caveat .lb{font-family:'Oswald',sans-serif;font-weight:500;font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--steel);margin-bottom:12px}
+.caveat p{margin-bottom:12px;max-width:940px}
+.caveat p:last-child{margin-bottom:0}
+
+
+.wk{width:100%;border-collapse:collapse;margin:6px 0 22px}
+.wk th{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);font-weight:400;text-align:right;padding:0 0 13px;border-bottom:1px solid var(--line)}
+.wk th:nth-child(1),.wk th:nth-child(2){text-align:left}
+.wk td{font-size:14.5px;color:var(--ink2);padding:13px 0;border-bottom:1px solid var(--line2);text-align:right;vertical-align:top}
+.wk td:nth-child(1){text-align:left;font-family:'Oswald',sans-serif;font-weight:400;font-size:15px;letter-spacing:.14em;color:var(--tungsten);width:64px}
+.wk td:nth-child(2){text-align:left;color:var(--ink2);padding-right:26px;line-height:1.5}
+.wk td.n{font-family:'Oswald',sans-serif;font-weight:300;font-size:17px;color:var(--ink)}
+.wk td.run{color:var(--ink3);font-size:14px}
+.wk tr.mo td{background:rgba(232,185,128,.07);border-bottom:1px solid rgba(232,185,128,.25);
+ font-family:'Oswald',sans-serif;font-weight:500;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--tungsten);padding:12px 0}
+.wk tr.mo td:nth-child(2){color:var(--tungsten)}
+.wk tr.sum td{border-bottom:0;border-top:1px solid var(--line);padding-top:18px;color:var(--ink)}
+.wk tr.sum td.n{font-weight:500;font-size:23px}
+
+
+/* phone framed stories */
+.phones{display:flex;gap:30px;flex-wrap:wrap;margin:26px 0 24px}
+.dev{width:296px;flex:0 0 296px}
+.screen{position:relative;width:296px;height:526px;border-radius:26px;overflow:hidden;
+ background:#000;box-shadow:0 0 0 8px #17171a, 0 0 0 9.5px #3a3a3e, 0 18px 40px rgba(0,0,0,.65)}
+.plate{position:absolute;inset:0;background-size:cover;background-position:center}
+.topfade{position:absolute;left:0;right:0;top:0;height:130px;
+ background:linear-gradient(180deg,rgba(0,0,0,.62),transparent)}
+.botfade{position:absolute;left:0;right:0;bottom:0;height:210px;
+ background:linear-gradient(0deg,rgba(0,0,0,.72),transparent)}
+/* ig chrome */
+.pbars{position:absolute;top:9px;left:9px;right:9px;display:flex;gap:3px;z-index:5}
+.pbars i{flex:1;height:2.5px;border-radius:2px;background:rgba(255,255,255,.34);display:block}
+.pbars i.on{background:#fff}
+.shead{position:absolute;top:20px;left:10px;right:10px;display:flex;align-items:center;gap:7px;z-index:5}
+.shead .av{width:26px;height:26px;border-radius:50%;background-size:cover;flex:0 0 26px}
+.shead .nm{font-size:11.5px;font-weight:600;color:#fff;letter-spacing:.01em}
+.shead .ago{font-size:11px;color:rgba(255,255,255,.72)}
+.shead .x{margin-left:auto;color:#fff;font-size:15px;opacity:.9;line-height:1}
+.sfoot{position:absolute;bottom:12px;left:10px;right:10px;display:flex;align-items:center;gap:9px;z-index:5}
+.sfoot .pill{flex:1;height:31px;border-radius:16px;border:1px solid rgba(255,255,255,.5);
+ display:flex;align-items:center;padding:0 13px;font-size:11.5px;color:rgba(255,255,255,.75)}
+.sfoot svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:1.8;flex:0 0 19px}
+/* story type */
+.sst{position:absolute;left:17px;right:60px;font-family:'Oswald',sans-serif;font-weight:200;
+ text-transform:uppercase;color:#f5f5f5;line-height:1.06;letter-spacing:.005em;z-index:4}
+.sst b{font-weight:500}
+.sbody{position:absolute;left:17px;right:64px;font-size:11px;line-height:1.42;color:#c8c8c8;z-index:4}
+.sfootline{position:absolute;left:17px;right:17px;z-index:4;border-top:1px solid rgba(255,255,255,.2);
+ padding-top:7px;font-family:'Oswald',sans-serif;font-weight:300;font-size:9px;letter-spacing:.26em;
+ text-transform:uppercase;color:#e8e8e8}
+.stick2{position:absolute;left:50%;transform:translateX(-50%);z-index:4;
+ border:1.5px dashed rgba(255,255,255,.45);border-radius:12px;background:rgba(255,255,255,.07);
+ display:flex;align-items:center;justify-content:center;text-align:center;
+ font-family:'Inter',sans-serif;font-weight:400;font-size:9.5px;letter-spacing:.13em;
+ text-transform:uppercase;color:rgba(255,255,255,.82);line-height:1.7;padding:0 10px}
+.devlab{padding:13px 3px 0}
+.devlab .t{font-family:'Oswald',sans-serif;font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
+.devlab .d{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);margin-top:5px}
+
+footer{padding-top:34px;color:var(--ink3);font-size:12.5px;line-height:1.85}
+@media(max-width:820px){.cover h1{font-size:48px}h2{font-size:32px}.grid2{grid-template-columns:1fr}
+ .igmedia{width:100%;height:auto}.ig{flex:1 1 auto;width:100%}}
+</style></head><body>
+<div class="wrap">
+
+<div class="cover">
+  <div class="k">Proposal &nbsp;·&nbsp; August 2026</div>
+  <h1>Renvir.<br><b>Renewed man.</b></h1>
+  <p class="lead">You told me what you needed on Saturday: <b>content to post on Instagram and Facebook, and somebody who will come to you and say "this is a great ad," because you do not have the time to sit down and think.</b></p>
+  <p class="lead">This is that, plus the part underneath it.</p>
+  <div class="m">Prepared for Alex &nbsp;·&nbsp; by Rob</div>
+</div>
+
+<section>
+  <div class="num">01</div>
+  <h2>What I found <b>before I made anything</b></h2>
+  <p>I spent a night on the market, your competitors' live ads, and your own storefronts before I drew a single frame. Four things came out of it that change what we should make.</p>
+
+  <h3>The buyer is older than the noise</h3>
+  <p>Every headline in men's skincare is about young men, and the usage numbers behind those headlines are real. But <b>household income peaks at 55 to 64, men's own top skin concern is acne rather than wrinkles until much later, and the one brand genuinely built on this audience reports customers who are primarily 40 to 70.</b> That brand is Caldera, the one you named as your reference.</p>
+  <p><b>So the target moves up and narrows: men 45 to 62, with a floor at 42.</b> Not 35 to 55. And we cede 18 to 34 entirely, because it is the most contested, most expensive audience in the category and its concerns are not what your line solves.</p>
+
+  <p><b>One exception, and it is a media buy rather than a brand direction.</b> Roughly three quarters of men in relationships are already using skincare somebody else bought for them. So <b>$150 of the three month budget, one cell, goes to showing the existing men's creative to women 40 to 60.</b> No new creative gets made for it and nothing about the brand moves. If it works we learn something cheap. If it does not it dies in a week and nothing ever knew it ran.</p>
+  <p>The counter-evidence is worth knowing too: Caldera reports 95% of their customers are men buying for themselves. That is exactly why this is one small cell and not a strategy. <b>Renvir is skincare for men and stays that way.</b></p>
+
+  <h3>Nobody is contesting anti-aging at your price</h3>
+  <p>I pulled every direct competitor's live ads from Meta's public library. Caldera is running roughly 170 ads and owns the aging claim almost alone. Everyone else is running acne, clean ingredients, or generic grooming. <b>Nobody sits between $19.95 and $39.95 with an anti-aging claim aimed at a man in his fifties.</b> Caldera proved the demand exists at premium prices. That is the opening, and it is more specific and more defensible than racing on its own.</p>
+
+  <h3>Facebook is not dead. It is where he lives</h3>
+  <p>Roughly 8 in 10 adults aged 30 to 64 use Facebook, and 30 to 49 year olds open it daily at a higher rate than any age group opens any other platform. Instagram is where the brand looks right; Facebook is where this particular man actually is. <b>We run both from one place, and no ad gets built twice.</b></p>
+
+  <h3>And the whole funnel is leaking</h3>
+  <ul>
+    <li><b>Your Google tag is a placeholder.</b> It literally reads GTM-XXXXXX, so nothing has been measured since launch</li>
+    <li><b>Your store runs zero apps.</b> No abandoned cart, no post purchase, no reviews, no reorder prompts</li>
+    <li><b>Your bio splits traffic away from your own site</b>, which costs you the margin and the customer's email</li>
+    <li><b>Facebook is registered as a personal profile</b>, which limits what ads and shop features you can run at all</li>
+    
+  </ul>
+  <p>None of that is a content problem. <b>The tag, the bio and the Facebook profile all get fixed in week one.</b> The store apps are a later job, and a better one to do once there is traffic arriving for them to catch.</p>
+</section>
+
+<section>
+  <div class="num">02</div>
+  <h2>The man first. <b>Then the room.</b></h2>
+  <div class="pull">
+    <div class="big">He is <b>a man with grit.</b><br>The man you want to be.<br><b>The man you want to hang out with.</b></div>
+    <p style="margin-top:24px">Before any of the rooms, him. Not a model, and not aspirational in the glossy sense. <b>Somebody who has done things, built things, fixed things, and been somewhere at six in the morning because it mattered.</b> A bit weathered. Comfortable in himself. The guy on the job site everybody actually likes.</p>
+    <p><b>That man never changes.</b> Not his face, not his bearing, not the way he carries himself. He is the constant across everything we make, and he is the reason this holds together as one brand when the pictures are different.</p>
+    <p>This comes straight out of what you said on our first call: <b>the cool guy with the fast cars and the fast boats, still middle class, and the greasers too, a little bit of everybody in every image.</b> That is not five customers. That is one man, and the viewer sorts himself by recognising him rather than by matching a demographic.</p>
+  </div>
+
+  <h3>So what is a world</h3>
+  <p><b>A world is simply the room he is standing in.</b> Same product, same man, same line. The only thing that moves is where he is.</p>
+  <div class="worlds"><span>The Track</span><span>Surf</span><span>The Garage</span><span>Nightlife</span><span>Tuesday, 6am</span></div>
+  <p>The list is not fixed. Moto, the boat, the gym, wherever else he credibly turns up. <b>What matters is that it is somewhere real, not a mood.</b></p>
+  <p><b>Which is what makes a world the right thing to test.</b> Every world is the same man making the same promise in a different room, so when one outpulls the others we have learned something true about where this brand lives, and none of it is anybody's opinion.</p>
+
+  <div class="grid2">
+    <div><h4>A world is not</h4><ul>
+      <li>A customer segment. We are not splitting the audience</li>
+      <li>A product line. Every world sells the same three products</li>
+      <li>A campaign theme that expires in six weeks</li>
+      <li>A different voice. The line never changes</li></ul></div>
+    <div><h4 style="color:var(--tungsten)">A world is</h4><ul>
+      <li>A room, a light, and a reason he is standing in it</li>
+      <li>A hypothesis we can settle for about $117</li>
+      <li>The unit everything inherits from: the feed, the shoot list, the site imagery, the creator brief</li>
+      <li>Permanent once it wins. We build in it for a year</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <div class="num">03</div>
+  <h2>The Track, <b>as a composition</b></h2>
+  <div class="caveat">
+    <div class="lb">Please read this first</div>
+    <p><b>The Track shown here is solely for composition purposes. This is not final creative.</b></p>
+    <p>What it is demonstrating is the <b>system</b>: the layout, the grade, the type hierarchy, where the mark and the footer sit, and how one world holds together across a Reel, a carousel, a static and a story. That part is settled and it is what I am asking you to react to.</p>
+    <p><b>What is not settled:</b> the environments and the man are generated, and both get replaced by real footage the moment we shoot or the moment we are at Indy. Nothing here has been through your web team's new messaging. <b>Treat every frame as a composition, not as an ad that is ready to run.</b></p>
+    <p>The one thing that is already real and stays real: <b>the product photography.</b> Every bottle you see is the actual photographed product, never generated, because the label is the one thing a generator gets wrong every time.</p>
+    <p style="border-top:1px solid rgba(110,113,117,.4);padding-top:18px;margin-top:18px"><b style="color:var(--tungsten)">And this is a standing start, not a ceiling.</b> I built all of it in a few days with no brand kit, no straight on product shots, no shoot, no access to your accounts and no direction from you. <b>With real direction I can make these ads look very good.</b> Tell me which worlds actually matter to you, hand me the logo kit and whatever the web team has landed on, get me one clean shot of each product, and the ceiling on this sits a long way above what is on this page. <b>What you are looking at is the floor.</b></p>
+  </div>
+
+  <h3>The Reel &nbsp;·&nbsp; 22 seconds</h3>
+  <div class="row">
+    <div class="phone">
+      <video src="a00-a25946.mp4" controls loop muted playsinline preload="metadata" poster="a01-efd575.jpg"></video>
+      <div class="phlab"><span class="t">The Reel</span><span class="d">composition &nbsp;·&nbsp; not final</span></div>
+    </div>
+    <div class="side">
+      <p><b>Press play.</b> Again, a composition rather than a finished ad. Pit lane, shower, sink, close, and out on the roundel. One beat per product, in the order he uses them.</p>
+      <p><b>The routine reads as preparation, not skincare.</b> A man about to strap into a car has a ritual, and this is part of it. That is the whole trick of this world, and it is why it can say "anti-aging" without ever using the word.</p>
+      <div class="row" style="margin:18px 0 0;gap:8px">
+        <figure style="width:150px"><img src="a02-161dd9.jpg"><figcaption style="padding:8px 9px 10px"><div class="fd">0:01 pit lane</div></figcaption></figure><figure style="width:150px"><img src="a03-271213.jpg" loading="lazy" decoding="async"><figcaption style="padding:8px 9px 10px"><div class="fd">0:06 shower</div></figcaption></figure><figure style="width:150px"><img src="a04-ae0eff.jpg" loading="lazy" decoding="async"><figcaption style="padding:8px 9px 10px"><div class="fd">0:11 sink</div></figcaption></figure><figure style="width:150px"><img src="a05-218fb5.jpg" loading="lazy" decoding="async"><figcaption style="padding:8px 9px 10px"><div class="fd">0:16 close</div></figcaption></figure><figure style="width:150px"><img src="a06-03d9bd.jpg" loading="lazy" decoding="async"><figcaption style="padding:8px 9px 10px"><div class="fd">0:22 roundel</div></figcaption></figure>
+      </div>
+    </div>
+  </div>
+
+  <h3>The carousel, as it actually runs</h3>
+  <p>Not a rectangle on a page. This is the feed, on a phone, with the ad chrome around it, which is the only way anybody will ever see it. <b style="color:var(--tungsten)">Swipe it.</b> Use the arrows or the dots and walk all four cards the way a buyer would.</p>
+  <div class="row">
+    <div class="ig">
+      <div class="ighead">
+        <div class="igav" style="background-image:url(a07-80530e.png)"></div>
+        <div><div class="ignm">renvirofficial</div><div class="igsp">Sponsored</div></div>
+        <div class="igdots">···</div>
+      </div>
+      <div class="igmedia">
+        <div class="igtrack" id="igt"><img src="a08-25aa13.jpg"><img src="a09-355597.jpg"><img src="a10-aa5d08.jpg"><img src="a11-47a822.jpg"></div>
+        <button class="ignav p" id="igp">‹</button><button class="ignav n" id="ign">›</button>
+        <div class="igcount" id="igc">1/4</div>
+      </div>
+      <div class="igcta"><div><div class="l">Shop now</div><div class="s">renvirco.com</div></div><div class="c">›</div></div>
+      <div class="igact"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.5-9A5.3 5.3 0 0 1 12 6.5 5.3 5.3 0 0 1 21.5 12c-2 4.1-9.5 9-9.5 9z"/></svg><svg viewBox="0 0 24 24"><path d="M21 12a8.5 8.5 0 1 1-3.4-6.8L21 4l-1.2 3.4A8.4 8.4 0 0 1 21 12z"/></svg><svg viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><span class="sp"></span><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4.5L6 21z"/></svg></div>
+      <div class="igdotrow" id="igd"><i class="on"></i><i></i><i></i><i></i></div>
+      <div class="iglikes">142 likes</div>
+      <div class="igcap"><b>renvirofficial</b> Every driver has a routine. Three steps, thirty seconds, every morning. <span class="m">... more</span></div>
+    </div>
+    <div class="side">
+      <p><b>The carousel is where the sale actually gets made.</b> Card one is the promise. Then one card per step in the order he uses them: shower, sink, seal.</p>
+      <p>It is the format a man in his fifties will genuinely read, it is the one people save and send to somebody, and <b>it is the only place the routine gets explained instead of implied.</b></p>
+      <p>Three things this view makes obvious that a flat card never does. <b>The next card peeks</b>, which is what makes a thumb swipe. <b>The bottom of the card competes with the CTA bar</b>, which is why our footer sits where it does. And <b>the caption truncates at about two lines</b>, so the first sentence has to carry the whole point.</p>
+    </div>
+  </div>
+
+  <h3>The stories &nbsp;·&nbsp; and the static</h3>
+  <div class="phones">
+  <div class="dev">
+    <div class="screen">
+      <div class="plate" style="background-image:url(a12-9e24fe.jpg)"></div>
+      <div class="topfade"></div><div class="botfade"></div>
+      <div class="pbars"><i class="on"></i><i></i><i></i></div>
+      <div class="shead"><div class="av" style="background-image:url(a07-80530e.png)"></div>
+        <div class="nm">renvirofficial</div><div class="ago">2h</div><div class="x">&times;</div></div>
+      <div class="sst" style="bottom:150px;font-size:25px"><b>Race morning.</b></div><div class="sbody" style="bottom:88px">Suit on. Coffee going cold. Thirty seconds at the sink before any of it starts.</div><div class="sfootline" style="bottom:60px">Renvir &nbsp;·&nbsp; Renewed man</div>
+      <div class="sfoot"><div class="pill">Send message</div><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.5-9A5.3 5.3 0 0 1 12 6.5 5.3 5.3 0 0 1 21.5 12c-2 4.1-9.5 9-9.5 9z"/></svg><svg viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
+    </div>
+    <div class="devlab"><div class="t">Presence</div><div class="d">no ask &nbsp;·&nbsp; 3 a week</div></div>
+  </div>
+  <div class="dev">
+    <div class="screen">
+      <div class="plate" style="background-image:url(a13-15eb19.jpg)"></div>
+      <div class="topfade"></div><div class="botfade"></div>
+      <div class="pbars"><i></i><i class="on"></i><i></i></div>
+      <div class="shead"><div class="av" style="background-image:url(a07-80530e.png)"></div>
+        <div class="nm">renvirofficial</div><div class="ago">2h</div><div class="x">&times;</div></div>
+      <div class="sst" style="bottom:162px;font-size:25px">Which one<br><b>do you reach<br>for first?</b></div><div class="stick2" style="bottom:90px;width:206px;height:52px">poll sticker<br>cleanser / serum / moisturizer</div><div class="sfootline" style="bottom:60px">Renvir &nbsp;·&nbsp; Renewed man</div>
+      <div class="sfoot"><div class="pill">Send message</div><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.5-9A5.3 5.3 0 0 1 12 6.5 5.3 5.3 0 0 1 21.5 12c-2 4.1-9.5 9-9.5 9z"/></svg><svg viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
+    </div>
+    <div class="devlab"><div class="t">Engagement</div><div class="d">poll &nbsp;·&nbsp; 1 a week</div></div>
+  </div>
+  <div class="dev">
+    <div class="screen">
+      <div class="plate" style="background-image:url(a14-fbfbaa.jpg)"></div>
+      <div class="topfade"></div><div class="botfade"></div>
+      <div class="pbars"><i></i><i></i><i class="on"></i></div>
+      <div class="shead"><div class="av" style="background-image:url(a07-80530e.png)"></div>
+        <div class="nm">renvirofficial</div><div class="ago">2h</div><div class="x">&times;</div></div>
+      <div class="sst" style="bottom:180px;font-size:25px">Three steps.<br><b>Thirty seconds.</b></div><div class="sbody" style="bottom:136px">Cleanser, serum, moisturizer. That is the whole routine.</div><div class="stick2" style="bottom:88px;width:198px;height:32px">link sticker &nbsp;·&nbsp; renvirco.com</div><div class="sfootline" style="bottom:60px">Renvir &nbsp;·&nbsp; Renewed man</div>
+      <div class="sfoot"><div class="pill">Send message</div><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.5-9A5.3 5.3 0 0 1 12 6.5 5.3 5.3 0 0 1 21.5 12c-2 4.1-9.5 9-9.5 9z"/></svg><svg viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
+    </div>
+    <div class="devlab"><div class="t">The ask</div><div class="d">link &nbsp;·&nbsp; 1 a week</div></div>
+  </div>
+</div>
+  <div class="row"><figure style="width:300px"><img src="a15-4b9535.jpg" loading="lazy" decoding="async"><figcaption><div class="fl">The static</div><div class="fd">4:5 &nbsp;·&nbsp; the grid</div></figcaption></figure></div>
+
+  <h3>How we work in between</h3>
+  <p><b>To be clear about something, because "check in" is the wrong word for it: we are in contact constantly.</b> Not twice a quarter. That is just how this runs.</p>
+  <div class="grid4">
+    <div><h4>Daily</h4><div class="cap">me, not you</div><ul>
+      <li>In the ad account: pacing, delivery, what is fatiguing</li>
+      <li>Comments and DMs answered in the brand's voice</li>
+      <li>Anything urgent comes to you the moment it happens, not at month end</li></ul></div>
+    <div><h4>Weekly</h4><div class="cap">five lines</div><ul>
+      <li>A short written report: watch time, shares and saves, profile visits to link taps, which world is winning, any earned mentions</li>
+      <li>Ending in a recommendation: keep, kill, or spend more</li>
+      <li>A quick call if you want one, none if you do not</li></ul></div>
+    <div><h4>Whenever</h4><div class="cap">both ways</div><ul>
+      <li>Text me. I will answer</li>
+      <li>Anything creative goes to you before it goes live</li>
+      <li>If I see something in your business outside my lane, I will tell you</li></ul></div>
+    <div><h4 style="color:var(--tungsten)">The two decision points</h4><div class="cap">different in kind</div><ul>
+      <li>These are the only two moments that are structured and scheduled</li>
+      <li><b>Not updates. Gates.</b> Do we keep going, what changes, where does the money move</li>
+      <li>Both are genuine off ramps</li></ul></div>
+  </div>
+  <p><b>Twenty minutes a week is what I need from you</b>, for approvals and answers. It is not how often you will hear from me.</p>
+
+  <h3>How the three months run</h3>
+  <div class="timeline">
+    <div class="tl"><div class="w">Month one</div><h4>Find the lane</h4>
+      <p>The week one list gets done. Round one goes live: three worlds, seven days, judged on the first three seconds of a Reel where the numbers are genuinely solid. Round two follows immediately: the two winners, five variations each, two weeks. The feed starts posting on a real rhythm and the account stops looking abandoned.</p>
+      <p><b>You end the month knowing which world Renvir lives in, with data instead of opinions.</b></p></div>
+    <div class="tl chk"><div class="w">Decision point one</div><h4>Not a status update. A gate</h4>
+      <ul><li>Which two worlds carry month two</li>
+      <li>What to kill, including if it was my favourite</li>
+      <li>Whether the new site changed the picture, and whether landing pages are worth building</li>
+      <li>Whether the budget moves. Up if something is working, down if I have not earned it</li></ul>
+      <p><b>This is a real off ramp.</b> If month one says I am not adding anything, I would rather you say it out loud than sit on it.</p></div>
+    <div class="tl"><div class="w">Month two</div><h4>Build on what won</h4>
+      <p>The winning worlds get made properly: more variations, better versions, the product photography working harder. Race week if the date lands, and everything shot at Indy costs nothing but attention. The feed gets its second month, which is when a grid stops looking like a start and starts looking like a brand.</p></div>
+    <div class="tl chk"><div class="w">Decision point two</div><h4>Month one asked what works. This asks what scales</h4>
+      <ul><li>Where the money goes in month three, now that we know what an order actually costs</li>
+      <li>What to systematise, so the parts that work run themselves</li>
+      <li>Whether Q4 gets a package</li></ul></div>
+    <div class="tl"><div class="w">Month three</div><h4>Run it</h4>
+      <p>Spend concentrates behind the winners. Everything that can be automated is: scheduling, publishing, reporting. And I write down how all of it runs, so it is not sitting in my head.</p>
+      <p><b>You end the quarter with a proven lane, a working feed, a library of assets you still own, and numbers you can make decisions with.</b></p></div>
+  </div>
+</section>
+
+<section>
+  <div class="num">05</div>
+  <h2>What you get, <b>month one</b></h2>
+  <div class="stats">
+    <div class="stat"><div class="v">69</div><div class="l">Finished frames designed</div></div>
+    <div class="stat"><div class="v">55</div><div class="l">Pieces published</div></div>
+    <div class="stat"><div class="v">13</div><div class="l">Ad creatives built and tested</div></div>
+    <div class="stat"><div class="v">5</div><div class="l">Broken systems fixed</div></div>
+  </div>
+  <div class="grid2">
+    <div><h4>Content</h4><div class="cap">18 posts, 24 stories</div><ul>
+      <li>8 Reels, two a week</li><li>4 carousels, one a week, 18 cards</li><li>6 statics</li>
+      <li>24 story frames</li><li>31 caption sets with alt text</li>
+      <li>A reusable design system</li></ul></div>
+    <div><h4>Ads</h4><div class="cap">13 creatives, 2 rounds</div><ul>
+      <li>Round one: 3 worlds, judged on the first three seconds</li>
+      <li>Round two: 10 variations behind the winners</li>
+      <li>Ad account built, structured and run daily</li>
+      <li>4 weekly reports, each ending in keep, kill or spend more</li></ul></div>
+  </div>
+  <div class="outside">
+    <span class="t">Not in this</span>
+    <p><b>Email flows, review collection and the rest of the retention layer are not in these three months.</b> They are real money and you are leaving them on the table, but they are worth building when there is traffic arriving for them to catch, and right now there is not. <b>Get the top of the funnel working first.</b> I can build that layer when it is worth building, and it is the obvious next conversation rather than something to buy on day one.</p>
+  </div>
+  <p><b>And what you own at the end of it:</b> a ranked list of worlds decided by buyers rather than opinion, a design system that makes every future piece faster, a working measurement stack for the first time, and everything in your name with a written record of how it runs.</p>
+
+  <h3>What running both channels actually involves</h3>
+  <p>About thirteen hours a week, every week: roughly five making the content, two on stories, two and a half replying to every comment and message, three on the ad account, one on the numbers. <b>A post is not a picture.</b> It is deciding what it is for, building the image, dropping in the real product, laying out the type, writing the caption and the alt text, and scheduling it to both channels. A good one is 45 to 90 minutes.</p>
+  <p>About a third of the work never shows up as a post at all: building the replacement ad before the current one wears out, knowing what is safe to change on a live campaign, keeping four surfaces on one tagline, and watching what the category is doing. <b>Automation takes month one from about eighty hours to about forty five by month three. It never goes to zero.</b> What it buys is month three going to the things that need a person, instead of to posting.</p>
+</section>
+
+<section>
+  <div class="num">06</div>
+  <h2>What it costs</h2>
+  <p>Two lines. Everything else is inside them.</p>
+  <table>
+    <thead><tr><th>&nbsp;</th><th>Month 1</th><th>Month 2</th><th>Month 3</th><th>Three months</th></tr></thead>
+    <tbody>
+      <tr><td>Ad spend, direct from your account</td><td class="n">$1,200</td><td class="n">$1,300</td><td class="n">$1,600</td><td class="n">$4,100</td></tr>
+      <tr><td>Fee, everything I make and run</td><td class="n">$3,000</td><td class="n">$3,000</td><td class="n">$3,000</td><td class="n">$9,000</td></tr>
+      <tr class="tot"><td>Total</td><td class="n">$4,200</td><td class="n">$4,300</td><td class="n">$4,600</td><td class="n">$13,100</td></tr>
+    </tbody>
+  </table>
+  <h3>The ad spend, week by week</h3>
+  <p>Every dollar of the $4,100, scheduled. <b>This is money Meta charges you directly. It never passes through me.</b> Your card sits on your own Business account, Meta bills it, and I never invoice you for a dollar of media.</p>
+  <table class="wk">
+    <thead><tr><th>&nbsp;</th><th>What is running</th><th>Meta</th><th>Running</th></tr></thead>
+    <tbody><tr class="mo"><td>Month one</td><td>find the lane</td><td>Meta</td><td>$1,200</td></tr><tr><td>Wk 1</td><td>Build week. Systems, channels and the feed start. Nothing live yet</td><td class="n">$0</td><td class="run">$0</td></tr><tr><td>Wk 2</td><td><b>Round one live.</b> Three worlds, seven days, $16.67 a day per world</td><td class="n">$350</td><td class="run">$350</td></tr><tr><td>Wk 3</td><td>Read round one. <b>Round two launches:</b> two winners at $25 a day each, plus the $150 side cell</td><td class="n">$425</td><td class="run">$775</td></tr><tr><td>Wk 4</td><td>Round two continues. Decision point one at the end of the week</td><td class="n">$425</td><td class="run">$1,200</td></tr><tr class="mo"><td>Month two</td><td>build on what won</td><td>Meta</td><td>$1,300</td></tr><tr><td>Wk 5</td><td>Winners scale. New variations behind whatever won</td><td class="n">$325</td><td class="run">$1,525</td></tr><tr><td>Wk 6</td><td>Scaling continues</td><td class="n">$325</td><td class="run">$1,850</td></tr><tr><td>Wk 7</td><td><b>Race week</b> if the Indy date lands. Paddock content into the feed</td><td class="n">$325</td><td class="run">$2,175</td></tr><tr><td>Wk 8</td><td>Scaling continues. Decision point two at the end of the week</td><td class="n">$325</td><td class="run">$2,500</td></tr><tr class="mo"><td>Month three</td><td>run it</td><td>Meta</td><td>$1,600</td></tr><tr><td>Wk 9</td><td>Spend concentrates behind the proven world. No more spreading</td><td class="n">$400</td><td class="run">$2,900</td></tr><tr><td>Wk 10</td><td>Concentrated</td><td class="n">$400</td><td class="run">$3,300</td></tr><tr><td>Wk 11</td><td>Concentrated</td><td class="n">$400</td><td class="run">$3,700</td></tr><tr><td>Wk 12</td><td>Concentrated. Quarter closes and I hand over the written record</td><td class="n">$400</td><td class="run">$4,100</td></tr><tr class="sum"><td></td><td>Three months</td><td class="n">$4,100</td><td class="run"></td></tr></tbody>
+  </table>
+  <div class="grid2">
+    <div><h4>Why week one has no Meta spend</h4>
+      <p style="font-size:15px;margin:0">The tracking has to be working before we buy a single impression, otherwise we are paying for traffic we cannot measure. Your Google tag is a placeholder today. <b>Week one fixes that, and then we start.</b> Everything else in week one is free to do and costs nothing to wait on.</p></div>
+    <div><h4 style="color:var(--tungsten)">Why the Meta number climbs</h4>
+      <p style="font-size:15px;margin:0">Month one is deliberately cheap because it is buying an answer rather than orders. <b>Once we know which world pulls, spending more stops being a gamble and starts being arithmetic.</b> It goes from $1,200 in month one to $1,600 in month three, and by then it is pointed at proven creative.</p></div>
+  </div>
+
+  <h3>Everything inside the fee</h3>
+  <div class="vault">
+    <div class="vaulthead"><span class="t">Inside the fee</span><span class="p">$3,000 <small>&nbsp;per month, one line</small></span></div>
+    <div class="vgrid">
+      <div class="vg"><div class="n">01</div><h4>Creative</h4><div class="q">13 ad creatives, 32 feed frames a month</div><ul>
+        <li>Every world built: Reels, carousels, statics, stories</li>
+        <li>All copy, captions, hashtags, alt text</li>
+        <li>Product compositing and retouching</li>
+        <li>The design system everything is built from</li></ul></div>
+      <div class="vg"><div class="n">02</div><h4>Paid media</h4><div class="q">managed daily</div><ul>
+        <li>Ad account built and structured</li>
+        <li>Campaigns launched, read and iterated</li>
+        <li>Creative rotated before it fatigues</li>
+        <li>Two full test rounds in month one</li></ul></div>
+      <div class="vg"><div class="n">03</div><h4>Organic</h4><div class="q">18 posts, 24 stories a month</div><ul>
+        <li>Instagram and Facebook, both fed</li>
+        <li>Four to five posts a week on a fixed rhythm</li>
+        <li>Stories most days</li>
+        <li>Scheduled, captioned, published</li></ul></div>
+      <div class="vg"><div class="n">04</div><h4>Community</h4><div class="q">same day, in your voice</div><ul>
+        <li>Every comment answered</li>
+        <li>Every DM answered</li>
+        <li>Tagged content reposted</li>
+        <li>Spam cleared</li></ul></div>
+      <div class="vg"><div class="n">05</div><h4>Systems</h4><div class="q">5 installed and fixed</div><ul>
+        <li>GA4, finally running</li>
+        <li>The Meta pixel, verified and firing</li>
+        <li>Facebook converted to a real Business Page</li>
+        <li>Bio pointed at one link, your own site</li>
+        <li>The old site redirected</li></ul></div>
+      <div class="vg"><div class="n">06</div><h4>Reporting</h4><div class="q">weekly, five lines</div><ul>
+        <li>Watch time, shares, saves, link taps</li>
+        <li>Which world is winning</li>
+        <li>Always ends in keep, kill or spend more</li>
+        <li>The two decision gates</li></ul></div>
+      <div class="vg"><div class="n">07</div><h4>Tools and software</h4><div class="q">six subscriptions, on me</div><ul>
+        <li>Midjourney, image generation</li>
+        <li>Kling, image to video generation</li>
+        <li>After Effects and Photoshop</li>
+        <li>Music licence at the tier that permits paid ads</li>
+        <li>The review app</li>
+        <li>Whatever else the work needs, on my card, not yours</li></ul></div>
+      <div class="vg"><div class="n">08</div><h4>Strategy and watch</h4><div class="q">the thinking underneath</div><ul>
+        <li>The market and buyer research this is built on</li>
+        <li>Competitors' live ads monitored, not guessed at</li>
+        <li>Positioning held consistent across every surface</li>
+        <li>Everything documented and handed over, in your name</li></ul></div>
+    </div>
+      </div>
+
+  <div class="outside">
+    <span class="t">Outside the fee</span>
+    <p><b>Ad spend, and only ad spend.</b> It is charged straight to your own Business account by Meta. <b>I never invoice it, never mark it up, and never take a cut of media</b>, because the moment I make money on your spend every recommendation I give you is worth less, and this whole thing depends on you trusting my recommendations.</p>
+  </div>
+
+  <h3>One thing about the first $350</h3>
+  <p>$350 buys about 28,000 impressions, roughly 500 clicks, and maybe ten orders. Against a $25 order that is about $35 spent to make $25. <b>It loses money on purpose.</b> What it actually buys is the answer to which world pulls, and right now that is worth more than ten orders, because it decides what every piece of content, every ad and every photograph looks like for the next year.</p>
+  <p>I would rather tell you that now than have you read the report in three weeks and conclude advertising does not work. It works. It needs a bigger budget and a proven creative, and <b>we get the proven creative first, cheaply.</b></p>
+</section>
+
+<section>
+  <div class="num">07</div>
+  <h2>What this costs <b>bought separately</b></h2>
+  <p>Three functions, three vendors, three invoices. Ad spend excluded from both sides, so this is like for like.</p>
+  <table>
+    <thead><tr><th>The function</th><th>Bought on its own</th><th>Month 1</th><th>Months 2 and 3</th></tr></thead>
+    <tbody>
+      <tr><td>Social management: content, community, reporting</td><td>Small agency retainer</td><td class="n">$2,500</td><td class="n">$2,500</td></tr>
+      <tr><td>Paid media management</td><td>Flat fee, sub $5K spend</td><td class="n">$1,000</td><td class="n">$1,000</td></tr>
+      <tr><td>Ad creative production</td><td>13 assets, or a creative retainer</td><td class="n">$1,500</td><td class="n">$1,500</td></tr>
+      <tr><td>Systems and tracking setup</td><td>One time project</td><td class="n">$1,500</td><td class="n">$0</td></tr>
+      <tr><td>Tools and software</td><td>Six subscriptions, on your card</td><td class="n">$180</td><td class="n">$180</td></tr>
+      <tr class="tot"><td>Separately</td><td></td><td class="n">$6,680</td><td class="n">$5,180</td></tr>
+      <tr class="tot"><td class="you">With me, everything included</td><td></td><td class="n you">$3,000</td><td class="n you">$3,000</td></tr>
+    </tbody>
+  </table>
+  <div class="hero">
+    <div class="k">Saved across three months</div>
+    <div class="v">$8,040</div>
+    <p><b>$17,040 bought separately. $9,000 with me.</b> And that comparison assumes three vendors would each take a client this size, which most will not: at $1,600 a month of ad spend the standard percentage model pays an agency about $240, so the real alternative is a $2,500 minimum retainer or nobody at all.</p>
+  </div>
+  <p><b>But the saving is not really the rate.</b> It is that one person makes the ad, buys the media, reads the number, and changes the ad, so the loop closes in hours instead of across three companies and several weeks.</p>
+</section>
+
+<section>
+  <div class="num">08</div>
+  <h2>Terms, <b>and what I need</b></h2>
+  <div class="grid2">
+    <div><h4>Terms</h4><ul>
+      <li><b>Month to month, reevaluated every month.</b> You are not committing to three months. The plan is built to run three because that is how long it takes to learn anything real, but nothing renews automatically, there is no notice period, and each month is a decision we both make on purpose. If it is not working you should be able to walk</li>
+      <li><b>Ad spend never touches me.</b> Meta bills your own Business account directly, so you see every charge as it happens and there is nothing to reconcile with me</li>
+      <li><b>Everything is yours.</b> Accounts in your name, assets handed over, nothing held hostage, and a written record of how it runs</li>
+      <li><b>Constant contact, and two decision points.</b> We talk all the time. The two scheduled gates are where we decide whether to keep going, what changes, and where the money moves. Both can shrink or stop this</li></ul></div>
+    <div><h4 style="color:var(--tungsten)">To start</h4><ul>
+      <li><b>A straight on photograph of each product</b>, alone, on black. It unlocks every frame I make</li>
+      <li><b>Admin access</b> to the ad account, the Shopify store and both channels</li>
+      <li><b>The Indy date</b>, so month two lands on the right week</li>
+      <li><b>Whether landing pages are in your web team's scope.</b> If they are, they are theirs and I will build creative to fit</li>
+      <li><b>An introduction to your web team, and permission to talk to them directly.</b> Not to manage them and not to get in their way. Every ad I build points at a page they own, so the two need to be planned together rather than handed over at the end. One conversation early saves weeks of the wrong thing pointing at the wrong page</li>
+      <li><b>Twenty minutes a week of your time.</b> That is what I need from you for approvals. You will hear from me considerably more often than that</li></ul></div>
+  </div>
+  <div class="pull">
+    <p style="font-size:18px"><b>What I would ask you to judge this on:</b> not whether you like the pictures, though I hope you do. Whether it is a system. Whether in three months you will know things about your own business that you do not know today, and own assets you will still be using next summer.</p>
+    <p style="font-size:18px;margin-bottom:0">Tear it apart on the call. I would rather you do that than nod and drift.</p>
+  </div>
+  <div class="sign">Rob</div>
+</section>
+
+
+<section>
+  <div class="num">09</div>
+  <h2>Side note: <b>your operator's lane</b></h2>
+  <div class="caveat">
+    <div class="lb">Not part of this proposal</div>
+    <p><b>Amazon and TikTok are your operator's lanes. Nothing in this section is included in my scope, my fee, or the ad spend above.</b> Every number in section 06 is Meta only.</p>
+    <p>I am putting this at the end because I found it while working on the creative and it would be strange not to tell you. Use it, hand it to him, or ignore it entirely.</p>
+  </div>
+
+  <h3>The bundle problem</h3>
+  <p>At current category click costs and your own conversion rate, an Amazon ad works out at roughly <b>$12 per order.</b> What that costs you depends entirely on which page the click lands on.</p>
+  <table>
+    <thead><tr><th>Where the spend points</th><th>Orders</th><th>Revenue</th><th>ACOS</th></tr></thead>
+    <tbody>
+      <tr><td>A bundle at about $50</td><td class="n">33</td><td class="n">$1,650</td><td class="n">24%, works</td></tr>
+      <tr><td>A single SKU at $23.99</td><td class="n">33</td><td class="n">$800</td><td class="n you">50%, loses money</td></tr>
+    </tbody>
+  </table>
+  <p>Same clicks, same conversion rate, same spend. <b>The only difference is the destination.</b> Your listings already convert at 11 to 14%, which is at the top of the category, so the machine works. It just has to be pointed at the right page.</p>
+
+  <h3>The price gap</h3>
+  <p>Your serum is $23.99 on Amazon and $27.95 on your own site. Supercharger is $18.99 there and $24.95 here. <b>Anyone who comparison shops is being trained to buy on the channel that costs you more and tells you less</b>, because Amazon keeps the customer's email and takes its cut. Worth a conversation, not necessarily a change.</p>
+
+
+  <h3>The TikTok pixel</h3>
+  <p>Your site has a Meta pixel and no TikTok pixel. <b>That means if your operator's affiliate program sends anybody to renvirco.com, nothing on the site can see it and nobody can prove the program worked.</b> The creators get paid on TikTok Shop sales, so the commissions are safe either way, but any traffic they push to your own store is currently invisible.</p>
+  <p><b>I am not running TikTok and I am not asking to.</b> But I will be in the site code installing GA4 in week one regardless, and adding his pixel while I am in there takes about two minutes. <b>If he wants it, it is free and it is done. If he would rather install it himself, that is completely fine and I will stay out of it.</b></p>
+
+  <div class="pull">
+    <p style="margin-bottom:0"><b>All of this is his call, not mine.</b> If he is already on it, ignore me. If he is not, these are the cheapest improvements available to you this month and none of them costs a dollar of new spend.</p>
+  </div>
+</section>
+
+<footer>
+Figures are US market rates for 2026, drawn from Meta's public ad library pulled August 2026, Pew Research, published crew and licensing rate data, and live vendor pricing.<br>
+Renvir &nbsp;·&nbsp; Renewed man &nbsp;·&nbsp; Stay looking younger
+</footer>
+</div>
+
+<script>
+(function(){var i=0,n=4,W=409;
+var t=document.getElementById('igt'),c=document.getElementById('igc'),d=document.getElementById('igd'),
+    p=document.getElementById('igp'),x=document.getElementById('ign');
+if(!t)return;
+function draw(){t.style.transform='translateX(-'+(i*W)+'px)';c.textContent=(i+1)+'/'+n;
+ [].forEach.call(d.children,function(e,k){e.className=(k===i?'on':'')});p.disabled=(i===0);x.disabled=(i===n-1);}
+var timer=null,taken=false;
+function stop(){if(timer){clearInterval(timer);timer=null;}}
+function play(){if(taken||timer)return;timer=setInterval(function(){i=(i+1)%n;draw();},5000);}
+function take(){taken=true;stop();}
+p.onclick=function(){take();if(i>0){i--;draw();}};
+x.onclick=function(){take();if(i<n-1){i++;draw();}};
+[].forEach.call(d.children,function(e,k){e.onclick=function(){take();i=k;draw();}});
+var sx=null;
+t.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+t.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;
+ if(dx<-40&&i<n-1){take();i++;}else if(dx>40&&i>0){take();i--;}sx=null;draw();},{passive:true});
+var box=t.parentNode;
+box.addEventListener('mouseenter',stop);
+box.addEventListener('mouseleave',play);
+draw();
+if(window.IntersectionObserver){new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting)play();else stop();});},{threshold:0.15}).observe(box);}
+else{play();}
+})();
+</script>
+</body></html>
