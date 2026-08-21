@@ -1,0 +1,380 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><title>Renvir · The revised proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--surface:#101010;--line:rgba(255,255,255,.10);--line2:rgba(255,255,255,.06);--ink:#f2f2f2;--ink2:#a8a8a8;--ink3:#7a7a7a;--tun:#E8B980}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;padding:64px 36px 90px}
+.wrap{max-width:1180px;margin:0 auto}
+.k{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--tun);margin-bottom:18px}
+h1{font-family:'Oswald',sans-serif;font-weight:200;font-size:56px;letter-spacing:.04em;text-transform:uppercase;line-height:1.02}
+h1 b{font-weight:500}
+.lead{font-size:18px;line-height:1.6;color:var(--ink2);max-width:860px;margin:22px 0 44px}
+.lead b{color:var(--ink);font-weight:500}
+h2{font-family:'Oswald',sans-serif;font-weight:300;font-size:14px;letter-spacing:.32em;text-transform:uppercase;color:var(--ink3);padding-bottom:14px;border-bottom:1px solid var(--line);margin:60px 0 24px}
+.lanehead{background:var(--surface);box-shadow:inset 0 2px 0 var(--tun);padding:28px 28px 24px;display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 28px}
+.lanehead .who{font-family:'Oswald',sans-serif;font-weight:500;font-size:21px;letter-spacing:.14em;text-transform:uppercase}
+.lanehead .price{font-family:'Oswald',sans-serif;font-weight:200;font-size:40px;color:var(--tun);line-height:1}
+.lanehead .price span{font-size:14px;color:var(--ink3);letter-spacing:.12em;text-transform:uppercase;font-weight:300}
+.lanehead .vol{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink2);flex-basis:100%}
+table{width:100%;border-collapse:collapse;background:var(--surface)}
+th{font-family:'Oswald',sans-serif;font-weight:400;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);text-align:left;padding:12px 18px;border-bottom:1px solid var(--line);border-top:1px solid var(--line)}
+th.r,td.r{text-align:right;white-space:nowrap}
+td{font-size:14px;line-height:1.55;color:var(--ink2);padding:13px 18px;border-bottom:1px solid var(--line2);vertical-align:top}
+td b{color:var(--ink);font-weight:400}
+td.mkt{font-family:'Oswald',sans-serif;font-weight:300;font-size:16px;color:var(--ink3);white-space:nowrap}
+td.n{font-family:'Oswald',sans-serif;font-weight:300;font-size:20px;color:var(--ink);white-space:nowrap}
+tr.sum td{background:rgba(232,185,128,.05);border-bottom:0;padding:16px 18px}
+tr.sum td b{color:var(--tun);font-family:'Oswald',sans-serif;font-weight:400;font-size:17px;letter-spacing:.06em}
+tr.us td{background:rgba(232,185,128,.05)}
+tr.us td.n{color:var(--tun)}
+.lanenote{background:var(--surface);padding:18px 28px 24px;font-size:13px;line-height:1.65;color:var(--ink3);border-top:1px solid var(--line)}
+.lanenote b{color:var(--ink2);font-weight:400}
+.gap{height:26px}
+.strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;background:var(--line2);margin-top:26px}
+.cell{background:var(--surface);padding:22px 24px}
+.cell h4{font-family:'Oswald',sans-serif;font-weight:500;font-size:14px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}
+.cell h4 i{color:var(--tun);font-style:normal}
+.cell p{font-size:13.5px;line-height:1.55;color:var(--ink2)}
+.cell p b{color:var(--ink);font-weight:400}
+.jobs{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line2)}
+.st{background:var(--surface);padding:24px 22px 26px}
+.st .n{font-family:'Oswald',sans-serif;font-weight:200;font-size:36px;color:var(--tun);line-height:1}
+.st h4{font-family:'Oswald',sans-serif;font-weight:500;font-size:15px;letter-spacing:.14em;text-transform:uppercase;margin:12px 0 8px}
+.st p{font-size:13.5px;line-height:1.55;color:var(--ink2)}
+.st p b{color:var(--ink);font-weight:400}
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line2)}
+.rule{background:var(--surface);padding:22px 24px}
+.rule h4{font-family:'Oswald',sans-serif;font-weight:500;font-size:15px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.rule p{font-size:14px;line-height:1.55;color:var(--ink2)}
+.rule p b{color:var(--ink);font-weight:400}
+.report{background:var(--surface);padding:26px 28px}
+.report ul{list-style:none;columns:2;column-gap:44px}
+.report li{font-size:14.5px;line-height:1.5;color:var(--ink2);padding:9px 0 9px 16px;position:relative;border-top:1px solid var(--line2);break-inside:avoid}
+.report li::before{content:"";position:absolute;left:0;top:17px;width:6px;height:1px;background:var(--tun)}
+.report li b{color:var(--ink);font-weight:400}
+.report .tail{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;color:var(--ink3);line-height:1.6}
+.report .tail b{color:var(--ink2);font-weight:400}
+.pull{border-left:2px solid var(--tun);padding:22px 28px;margin-top:56px;background:var(--surface)}
+.pull p{font-size:17px;line-height:1.6;color:var(--ink2)}
+.pull p b{color:var(--ink);font-weight:500}
+.foot{margin-top:40px;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink3)}
+.lanebar{display:flex;align-items:baseline;gap:18px;background:var(--surface);box-shadow:inset 0 2px 0 var(--tun);padding:16px 20px;margin-top:26px}
+.lanebar h3{font-family:'Oswald',sans-serif;font-weight:500;font-size:15px;letter-spacing:.18em;text-transform:uppercase}
+.lanebar span{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3)}
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:var(--line2)}
+.tile{background:var(--surface);padding:10px 10px 12px}
+.tile .tag{font-family:'Oswald',sans-serif;font-weight:400;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tun);margin-bottom:8px;white-space:nowrap}
+.tile .tag i{color:var(--ink3);font-style:normal}
+.tile .im{position:relative;width:100%;overflow:hidden;background:#000}
+.tile .im.t9{aspect-ratio:9/16}
+.tile .im.t45{aspect-ratio:4/5}
+.tile .im img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92}
+.tile .im .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.tile .im .play b{width:34px;height:34px;border:1px solid rgba(255,255,255,.7);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;background:rgba(0,0,0,.35)}
+.tile .cap{font-size:11px;line-height:1.45;color:var(--ink3);margin-top:8px}
+.tile .grid4{display:grid;grid-template-columns:1fr 1fr;gap:2px;aspect-ratio:4/5}
+.tile .grid4 img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92}
+.tile .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;aspect-ratio:9/11}
+.tile .grid3 img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92}
+.wallnote{background:var(--surface);padding:18px 28px 22px;font-size:13px;line-height:1.65;color:var(--ink3);border-top:1px solid var(--line);margin-bottom:0}
+.wallnote b{color:var(--ink2);font-weight:400}
+
+.dash{background:var(--surface);padding:20px 22px 4px;border-bottom:1px solid var(--line2)}
+.dbar{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px;padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:2px}
+.dbar .t{font-family:'Oswald',sans-serif;font-weight:200;font-size:24px;letter-spacing:.06em;text-transform:uppercase}
+.dbar .t b{font-weight:500}
+.dbar .meta{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3)}
+.dbar .meta i{color:var(--tun);font-style:normal}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;background:var(--line2);margin-top:2px}
+.kpi{background:#0d0d0d;padding:16px 14px 18px}
+.kpi .lab{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);line-height:1.4;min-height:26px}
+.kpi .v{font-family:'Oswald',sans-serif;font-weight:200;font-size:34px;color:var(--tun);line-height:1;margin-top:9px}
+.kpi .v.sm{font-size:17px;letter-spacing:.04em;padding:8px 0 9px}
+.kpi .v.zero{color:var(--ink)}
+.kpi .sub{font-size:11px;line-height:1.45;color:var(--ink3);margin-top:7px}
+.drow{display:grid;gap:2px;background:var(--line2);margin-top:2px}
+.dr2{grid-template-columns:1fr 1fr}
+.dr3{grid-template-columns:repeat(3,1fr)}
+.panel{background:#0d0d0d;padding:18px 20px 20px}
+.phead{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:12px}
+.phead h4{font-family:'Oswald',sans-serif;font-weight:500;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase}
+.chip{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);border:1px solid var(--line);padding:4px 7px;white-space:nowrap}
+.chip.live{color:var(--tun);border-color:rgba(232,185,128,.45)}
+.panel svg{width:100%;height:auto;display:block}
+.pnote{font-size:11.5px;line-height:1.5;color:var(--ink3);margin-top:11px}
+.pnote b{color:var(--ink2);font-weight:400}
+.mix{display:flex;flex-direction:column;gap:8px;margin-top:2px}
+.mrow{display:grid;grid-template-columns:126px 1fr 28px;align-items:center;gap:10px}
+.mrow .ml{font-size:11.5px;color:var(--ink2)}
+.mrow .mb{height:8px;background:rgba(255,255,255,.05)}
+.mrow .mb span{display:block;height:100%;background:var(--tun);opacity:.85}
+.mrow .mn{font-family:'Oswald',sans-serif;font-weight:300;font-size:14px;color:var(--ink);text-align:right}
+.inbox{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line2)}
+.ic{background:rgba(255,255,255,.03);padding:13px 15px}
+.ic .v{font-family:'Oswald',sans-serif;font-weight:200;font-size:25px;color:var(--ink);line-height:1}
+.ic .l{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);margin-top:7px;line-height:1.4}
+.verdict{background:#0d0d0d;border-left:2px solid var(--tun);padding:20px 24px;margin-top:2px}
+.verdict h4{font-family:'Oswald',sans-serif;font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--tun);margin-bottom:9px}
+.verdict p{font-size:15px;line-height:1.6;color:var(--ink2)}
+.verdict p b{color:var(--ink);font-weight:500}
+@media (max-width:980px){.kpis{grid-template-columns:repeat(3,1fr)}.dr2,.dr3{grid-template-columns:1fr}}
+@media (max-width:900px){.strip,.jobs,.rules{grid-template-columns:1fr}h1{font-size:38px}.report ul{columns:1}body{padding:44px 20px 70px}td,th{padding:10px 12px}.tiles{grid-template-columns:repeat(2,1fr)}}
+</style></head><body><div class="wrap">
+
+<div class="k">Renvir &nbsp;·&nbsp; The revised proposal &nbsp;·&nbsp; August 2026</div>
+<h1>Two lines. <b>One engine.</b></h1>
+<p class="lead">You asked for the role split in two and priced apart, so here it is, taken down to the unit. <b>Ray owns paid: the account, the budgets, the targeting, the testing, the influencer pipeline. I keep him supplied with finished creative, and I own organic Instagram and Facebook end to end.</b> Each line below shows what a unit is, how many land in a typical week, and what one costs at going freelance and studio rates if you bought it on its own. Same design system feeds both lanes, which is what makes the brand look like one company everywhere it shows up.</p>
+
+<h2>Line one &nbsp;·&nbsp; Creative production for Ray</h2>
+<div class="lanehead">
+  <div class="who">01 &nbsp;Creative production</div>
+  <div class="price">$1,800 <span>/ month</span></div>
+  <div class="vol">8 to 12 ad ready pieces a week &nbsp;·&nbsp; floor of 8 &nbsp;·&nbsp; built from your creator material, the new product photography, and my original imagery and content where needed</div>
+</div>
+<table>
+  <tr><th>What counts as a piece</th><th>Typical week</th><th class="r">Market, per unit</th></tr>
+  <tr><td><b>New Reel or short video.</b> 15 to 30 seconds, edited, typed, safe zones respected, sound on, the real jar in frame</td><td>2</td><td class="mkt r">$350 to $700</td></tr>
+  <tr><td><b>New static ad.</b> One designed frame, 4:5 or 9:16, copy on</td><td>2</td><td class="mkt r">$100 to $250</td></tr>
+  <tr><td><b>Hook variation.</b> Same body, new first three seconds. How winners get found</td><td>3</td><td class="mkt r">$75 to $150</td></tr>
+  <tr><td><b>Cutdown.</b> A 30 becomes a 15 or a 6 for placements that need it</td><td>2</td><td class="mkt r">$60 to $125</td></tr>
+  <tr><td><b>Format rebuild.</b> An existing piece reworked for a new placement or for TikTok. Before and after versions where the material supports it and the claim stays compliant</td><td>1</td><td class="mkt r">$60 to $125</td></tr>
+  <tr><td><b>Delivered ready to launch.</b> Sized and named for the ad account, copy attached, in the shared folder, with a note on what it is for</td><td>Every piece</td><td class="mkt r">Included</td></tr>
+  <tr class="sum"><td><b>A typical month: 40 or more finished pieces</b></td><td>8 to 12 a week</td><td class="r"><b>About $42 a piece</b></td></tr>
+</table>
+<div class="lanenote"><b>The guardrails, so the count means something:</b> a week is never all resizes. Every week carries at least two new videos and two new statics; variations, cutdowns and rebuilds fill out the rest, because that mix is what a testing account actually burns through. Bought at the market rates above, one typical week of this quotes at $1,300 to $2,700 on its own. Ray briefs, his performance feedback drives the variations, and the replacement is ready before the current ad wears out.</div>
+
+<div class="gap"></div>
+
+<h2>Line two &nbsp;·&nbsp; Organic Instagram + Facebook</h2>
+<div class="lanehead">
+  <div class="who">02 &nbsp;Organic management</div>
+  <div class="price">$1,200 <span>/ month</span></div>
+  <div class="vol">6 to 10 posts a week &nbsp;·&nbsp; Stories on top &nbsp;·&nbsp; the inbox worked daily</div>
+</div>
+<table>
+  <tr><th>What counts as a post, and what comes with the week</th><th>Typical week</th><th class="r">Market, per unit</th></tr>
+  <tr><td><b>Organic Reel,</b> cut native for the feed, caption in the approved brand voice. Counts as one post</td><td>2</td><td class="mkt r">$150 to $300</td></tr>
+  <tr><td><b>Carousel,</b> 4 to 6 designed cards. Counts as one post, carries the labor of three. The format Instagram currently rewards most</td><td>1</td><td class="mkt r">$150 to $400</td></tr>
+  <tr><td><b>Static posts,</b> designed, captioned, alt text and hashtags on every one. Each counts as one post</td><td>5</td><td class="mkt r">$50 to $150</td></tr>
+  <tr><td><b>Stories,</b> near daily, on top of the post count, never counted against it. What makes the account look inhabited instead of scheduled</td><td>5 to 6</td><td class="mkt r">Included</td></tr>
+  <tr><td><b>The inbox.</b> Comments and DMs answered daily in the brand voice, spam cleared, tagged content reposted</td><td>Daily</td><td class="mkt r">$500 to $1,000 / mo</td></tr>
+  <tr><td><b>The calendar,</b> maintained a week ahead in a shared sheet you can open any time</td><td>Standing</td><td class="mkt r">Included</td></tr>
+  <tr><td><b>The handoff to paid.</b> Organic winners flagged to Ray as ad candidates, with the numbers that earned it</td><td>Weekly</td><td class="mkt r">Included</td></tr>
+  <tr><td><b>The weekly report,</b> one page, same format every week, ending in keep, kill, or build more</td><td>Weekly</td><td class="mkt r">$200 to $400 / mo</td></tr>
+  <tr class="sum"><td><b>A typical month: 30 or more posts, daily Stories, a worked inbox, four reports</b></td><td>6 to 10 posts a week</td><td class="r"><b>$1,200 flat</b></td></tr>
+</table>
+<div class="lanenote"><b>For scale:</b> standing social management retainers run $2,500 to $5,000 a month and typically publish 12 to 15 posts inside them. This line publishes twice that, answers everything, and hands Ray the organic winners every week. <b>One honest counting rule across both lines:</b> when a feed post becomes an ad, or an ad becomes a post, it counts once, in the lane it was made for. No double counting, ever.</div>
+
+<div class="strip">
+  <div class="cell"><h4>Total: <i>$3,000 a month</i></h4><p><b>Everything included.</b> One clean invoice, two lines.</p></div>
+  <div class="cell"><h4>Media never touches me</h4><p>Ad spend, budgets and billing stay entirely in your Business account with Ray. <b>I never invoice, mark up, or take a piece of media.</b> My recommendations stay clean because I make nothing on them.</p></div>
+  <div class="cell"><h4>If Ray needs more</h4><p>If his testing appetite grows past 12 pieces in a week, additional creative runs at <b>$150 a piece, quoted before it is made.</b> You will never see a surprise line.</p></div>
+</div>
+
+<h2>One week, on the wall</h2>
+<p class="lead" style="margin-top:0;font-size:16px">Numbers are abstract, so here is what a typical week physically looks like, built from the Track comps you have already seen. <b>Notice the repeats on the top row. That is not padding, that is the method:</b> one strong body becomes a family of hooks, cutdowns and rebuilds, because variations of a proven piece are what a testing account burns through. Every image below is a placeholder for the same unit made from your creator material, the new photography, and whatever original content I create.</p>
+
+<div class="lanebar"><h3>Line one</h3><span>Ray's folder &nbsp;·&nbsp; 10 pieces this week</span></div>
+<div class="tiles">
+  <div class="tile"><div class="tag">New reel &nbsp;<i>· 0:22</i></div><div class="im t9"><img src="https://robschraderca.github.io/renvir/a01-efd575.jpg" loading="lazy" alt=""><div class="play"><b>&#9654;</b></div></div><div class="cap">Full body. Edited, typed, sound on, safe zones respected</div></div>
+  <div class="tile"><div class="tag">New reel &nbsp;<i>· 0:15</i></div><div class="im t9"><img src="https://robschraderca.github.io/renvir/a05-218fb5.jpg" loading="lazy" alt=""><div class="play"><b>&#9654;</b></div></div><div class="cap">Second body, the routine at the sink</div></div>
+  <div class="tile"><div class="tag">Hook variation &nbsp;<i>· A</i></div><div class="im t9"><img src="https://robschraderca.github.io/renvir/a03-271213.jpg" loading="lazy" alt=""></div><div class="cap">Same body, new first three seconds</div></div>
+  <div class="tile"><div class="tag">Hook variation &nbsp;<i>· B</i></div><div class="im t9"><img src="https://robschraderca.github.io/renvir/a04-ae0eff.jpg" loading="lazy" alt=""></div><div class="cap">Same body, opens in the shower</div></div>
+  <div class="tile"><div class="tag">Hook variation &nbsp;<i>· C</i></div><div class="im t9"><img src="https://robschraderca.github.io/renvir/a06-03d9bd.jpg" loading="lazy" alt=""></div><div class="cap">Same body, opens on the close</div></div>
+  <div class="tile"><div class="tag">Cutdown &nbsp;<i>· 0:15</i></div><div class="im t9"><img src="https://robschraderca.github.io/renvir/a04-ae0eff.jpg" loading="lazy" alt=""><div class="play"><b>&#9654;</b></div></div><div class="cap">The 22 becomes a 15 for placements that need it</div></div>
+  <div class="tile"><div class="tag">Cutdown &nbsp;<i>· 0:06</i></div><div class="im t9"><img src="https://robschraderca.github.io/renvir/a06-03d9bd.jpg" loading="lazy" alt=""><div class="play"><b>&#9654;</b></div></div><div class="cap">Six second bumper, logo on from frame one</div></div>
+  <div class="tile"><div class="tag">Static &nbsp;<i>· 4:5</i></div><div class="im t45"><img src="https://robschraderca.github.io/renvir/a15-4b9535.jpg" loading="lazy" alt=""></div><div class="cap">The helmet static, feed sized</div></div>
+  <div class="tile"><div class="tag">Static &nbsp;<i>· 9:16</i></div><div class="im t9"><img src="https://robschraderca.github.io/renvir/a02-161dd9.jpg" loading="lazy" alt=""></div><div class="cap">Story placement version</div></div>
+  <div class="tile"><div class="tag">Rebuild &nbsp;<i>· TikTok</i></div><div class="im t9"><img src="https://robschraderca.github.io/renvir/a05-218fb5.jpg" loading="lazy" alt=""></div><div class="cap">Existing piece reworked for the other platform</div></div>
+</div>
+
+<div class="lanebar"><h3>Line two</h3><span>The feed &nbsp;·&nbsp; 8 posts this week, Stories on top</span></div>
+<div class="tiles">
+  <div class="tile"><div class="tag">Carousel &nbsp;<i>· 4 cards, 1 post</i></div><div class="grid4"><img src="https://robschraderca.github.io/renvir/a08-25aa13.jpg" loading="lazy" alt=""><img src="https://robschraderca.github.io/renvir/a09-355597.jpg" loading="lazy" alt=""><img src="https://robschraderca.github.io/renvir/a10-aa5d08.jpg" loading="lazy" alt=""><img src="https://robschraderca.github.io/renvir/a11-47a822.jpg" loading="lazy" alt=""></div><div class="cap">Counts as one post, carries the labor of three</div></div>
+  <div class="tile"><div class="tag">Organic reel</div><div class="im t9"><img src="https://robschraderca.github.io/renvir/a04-ae0eff.jpg" loading="lazy" alt=""><div class="play"><b>&#9654;</b></div></div><div class="cap">Cut native for the feed, caption in the brand voice</div></div>
+  <div class="tile"><div class="tag">Organic reel</div><div class="im t9"><img src="https://robschraderca.github.io/renvir/a01-efd575.jpg" loading="lazy" alt=""><div class="play"><b>&#9654;</b></div></div><div class="cap">Adapted from the week's ad body, counted once</div></div>
+  <div class="tile"><div class="tag">Static posts &nbsp;<i>· 5 this week</i></div><div class="im t45"><img src="https://robschraderca.github.io/renvir/a02-161dd9.jpg" loading="lazy" alt=""></div><div class="cap">Each designed, captioned, alt text and hashtags on</div></div>
+  <div class="tile"><div class="tag">Stories &nbsp;<i>· daily, uncounted</i></div><div class="grid3"><img src="https://robschraderca.github.io/renvir/a12-9e24fe.jpg" loading="lazy" alt=""><img src="https://robschraderca.github.io/renvir/a13-15eb19.jpg" loading="lazy" alt=""><img src="https://robschraderca.github.io/renvir/a14-fbfbaa.jpg" loading="lazy" alt=""></div><div class="cap">Presence, an engagement poll, one ask with the link</div></div>
+</div>
+<div class="wallnote"><b>What you are looking at is the system, not the final creative.</b> These frames are the Track comps, composition only, shown here to make the weekly volume real. From week one the same wall fills with your creator and influencer material, the new product photography, my original imagery and content where the week needs it, and whatever you send back from the road. The real jar in every frame, the sprocket on from frame one, and if a piece looks generated, it does not ship.</div>
+
+<h2>What social does here, and what the follower numbers really mean</h2>
+<p class="lead" style="margin-top:0;font-size:16px">You want 25,000 relevant followers, and you also said the smart thing in the same paragraph: set real targets after a 30 day baseline. That is exactly how we will do it. Here is the category context those targets get set against, as of this month.</p>
+<table>
+  <tr><th>Brand</th><th>Instagram</th><th>The context</th></tr>
+  <tr><td>Dr. Squatch</td><td class="n">~1.2M</td><td>Ten years, Super Bowl ads, celebrity stunts, now owned by Unilever. Aimed at a much younger man. Not our fight</td></tr>
+  <tr><td>Caldera + Lab</td><td class="n">134K</td><td>Roughly $40M a year, six years of heavy paid spend. <b>288 posts ever, about four a month.</b> Their feed is a shop window, not a growth engine</td></tr>
+  <tr><td>Tiege Hanley</td><td class="n">64K</td><td>Nearly ten years old, founded by a YouTuber with a 6.9M subscriber channel pouring into it</td></tr>
+  <tr><td>Brickell</td><td class="n">39K</td><td>Premium men's skincare, more than a decade old</td></tr>
+  <tr class="us"><td><b>Renvir</b></td><td class="n">197</td><td><b>Today. Which is the honest starting line, and why the baseline month matters</b></td></tr>
+</table>
+<p class="lead" style="margin:24px 0 28px;font-size:16px">Read Caldera closely, because it is the brand you respect and it proves the point two ways. <b>Nobody in this category has ever grown a big following fast or organically. The big counts were bought: years of ad spend and creator money pulling people in, with the feed there to catch them.</b> And Caldera built $40M on a quiet feed, because the feed's real job is not audience size. It has four jobs, and we will do all four.</p>
+<div class="jobs">
+  <div class="st"><div class="n">01</div><h4>The trust check</h4><p>Our buyer sees an ad, and before he types in a card number he taps the profile. Is it alive, does it look premium, is anyone home. <b>This is where organic converts money Ray already spent.</b> A dead account kills ads that were working.</p></div>
+  <div class="st"><div class="n">02</div><h4>The free testing lab</h4><p>Every organic post is a zero cost creative test. <b>The over performers get handed to Ray as paid variations,</b> exactly as your email asks. This is the most commercially valuable line in the whole scope.</p></div>
+  <div class="st"><div class="n">03</div><h4>Catching paid attention</h4><p>Ray's ads, creators and influencers generate reach. The account is the net that catches it: follows, tags, reposts, DMs. <b>Followers grow as a function of his spend plus a feed worth following.</b> The two lanes need each other.</p></div>
+  <div class="st"><div class="n">04</div><h4>The owned audience</h4><p>Caldera rents every impression it gets. Nobody serving our customer has built an audience they own. <b>Worth building, and we build it the only way that lasts: real people, no purchased followers, no automation.</b> Agreed on that completely.</p></div>
+</div>
+<div class="pull" style="margin-top:2px">
+  <p><b>Followers are the scoreboard, not the game.</b> Month one establishes the baseline: reach, non follower reach, engagement, profile visits, growth rate. Then we set the 60 and 90 day targets together, on real numbers, and I will be accountable to them in writing every week.</p>
+</div>
+
+<h2>How success gets measured</h2>
+<p class="lead" style="margin-top:0;font-size:16px">Each line gets judged on what it actually controls, with numbers, in writing, every week. <b>Revenue, conversions and return on spend live in Ray's lane and his dashboards.</b> These two lines get measured upstream of that, on the things that make his numbers possible.</p>
+<div class="rules">
+  <div class="rule"><h4>Line one succeeds when the creative works</h4><p><b>Hook rate:</b> the share of people who stay past the first three seconds, the most sensitive read on whether a piece stops the scroll. <b>Hold rate:</b> whether they stay through it. <b>Usage rate:</b> what share of delivered pieces Ray actually puts live, because creative he does not run is creative that missed. <b>Winners found:</b> pieces that earn scale each month, with the replacement built before the current one fatigues. If hook rates climb and Ray is never waiting on creative, line one is doing its job.</p></div>
+  <div class="rule"><h4>Line two succeeds when the account comes alive</h4><p><b>Non follower reach:</b> is the content escaping the existing audience, the truest organic growth signal. <b>Saves and shares:</b> the signals Meta rewards with distribution. <b>Profile visits and link taps:</b> attention turning into site sessions. <b>Response time:</b> every comment and DM answered inside a day. <b>Organic winners promoted to paid:</b> the lab's output, counted monthly. <b>Follower growth:</b> tracked every week against the baseline trend, with the 60 and 90 day targets we set together after month one.</p></div>
+</div>
+
+<h2>The weekly report, and the first one is already written</h2>
+<p class="lead" style="margin-top:0;font-size:16px">You asked for a short weekly report. It is one page, the same shape every week, so the trend is readable at a glance. <b>Rather than describe it, here is the real one for this week, built before anything starts, because a growth target without a starting line is just a wish.</b> Every number in it is true today. The hatched panels are not missing data, they are waiting on account access, and they fill in permanently the day it is granted.</p>
+
+<div class="dash">
+  <div class="dbar">
+    <div class="t">Weekly dashboard <b>· Week 00</b></div>
+    <div class="meta">Renvir &nbsp;·&nbsp; <i>Baseline, before anything starts</i></div>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><div class="lab">Instagram followers</div><div class="v">197</div><div class="sub">The starting line</div></div>
+    <div class="kpi"><div class="lab">Published this week</div><div class="v zero">0</div><div class="sub">Dormant for months</div></div>
+    <div class="kpi"><div class="lab">Posts, lifetime</div><div class="v zero">31</div><div class="sub">Across the account's life</div></div>
+    <div class="kpi"><div class="lab">Comments and DMs handled</div><div class="v zero">0</div><div class="sub">Spam still sitting there</div></div>
+    <div class="kpi"><div class="lab">Ad pieces delivered</div><div class="v zero">0</div><div class="sub">Target is 8 to 12 a week</div></div>
+    <div class="kpi"><div class="lab">Facebook Page</div><div class="v sm">None yet</div><div class="sub">Still a personal profile, so no data exists</div></div>
+  </div>
+
+  <div class="drow dr2">
+    <div class="panel">
+      <div class="phead"><h4>Follower trend</h4><span class="chip live">Tracking now</span></div>
+      <svg viewBox="0 0 560 190" role="img" aria-label="Follower trend, flat at 197 through dormancy">
+        <line x1="46" y1="20" x2="46" y2="150" stroke="rgba(255,255,255,.12)"/>
+        <line x1="46" y1="150" x2="540" y2="150" stroke="rgba(255,255,255,.12)"/>
+        <line x1="46" y1="118" x2="540" y2="118" stroke="rgba(255,255,255,.05)"/>
+        <line x1="46" y1="86" x2="540" y2="86" stroke="rgba(255,255,255,.05)"/>
+        <line x1="46" y1="54" x2="540" y2="54" stroke="rgba(255,255,255,.05)"/>
+        <text x="38" y="154" text-anchor="end" fill="#7a7a7a" font-family="Oswald" font-size="11">0</text>
+        <text x="38" y="122" text-anchor="end" fill="#7a7a7a" font-family="Oswald" font-size="11">100</text>
+        <text x="38" y="90" text-anchor="end" fill="#7a7a7a" font-family="Oswald" font-size="11">200</text>
+        <text x="38" y="58" text-anchor="end" fill="#7a7a7a" font-family="Oswald" font-size="11">300</text>
+        <path d="M60 87 L300 87" stroke="#E8B980" stroke-width="2" fill="none"/>
+        <circle cx="300" cy="87" r="4" fill="#E8B980"/>
+        <text x="308" y="82" fill="#f2f2f2" font-family="Oswald" font-size="15">197</text>
+        <text x="308" y="98" fill="#7a7a7a" font-family="Inter" font-size="10.5">today</text>
+        <path d="M300 87 L530 87" stroke="#7a7a7a" stroke-width="1" stroke-dasharray="3 5" fill="none"/>
+        <text x="60" y="170" fill="#7a7a7a" font-family="Inter" font-size="10.5">Dormant period</text>
+        <text x="530" y="170" text-anchor="end" fill="#7a7a7a" font-family="Inter" font-size="10.5">Next 90 days</text>
+      </svg>
+      <div class="pnote"><b>Flat, because nothing has been published in months.</b> The dotted line is where the work starts</div>
+    </div>
+    <div class="panel">
+      <div class="phead"><h4>Reach and non follower reach</h4><span class="chip">Locked · needs access</span></div>
+      <svg viewBox="0 0 560 190" role="img" aria-label="Reach panel, empty until access is granted">
+        <defs><pattern id="h1" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="9" stroke="rgba(255,255,255,.05)" stroke-width="1"/></pattern></defs>
+        <rect x="46" y="20" width="494" height="130" fill="url(#h1)"/>
+        <line x1="46" y1="20" x2="46" y2="150" stroke="rgba(255,255,255,.12)"/>
+        <line x1="46" y1="150" x2="540" y2="150" stroke="rgba(255,255,255,.12)"/>
+        <text x="293" y="80" text-anchor="middle" fill="#7a7a7a" font-family="Oswald" font-size="13" letter-spacing="3">UNLOCKS WITH ACCESS</text>
+        <text x="293" y="102" text-anchor="middle" fill="#5f5f5f" font-family="Inter" font-size="11">Total reach against non follower reach, weekly</text>
+        <text x="60" y="170" fill="#7a7a7a" font-family="Inter" font-size="10.5">Week 1</text>
+        <text x="530" y="170" text-anchor="end" fill="#7a7a7a" font-family="Inter" font-size="10.5">Week 12</text>
+      </svg>
+      <div class="pnote"><b>The most important number on the page.</b> Non follower reach is the only honest read on whether content is escaping the audience we already have</div>
+    </div>
+  </div>
+
+  <div class="drow dr3">
+    <div class="panel">
+      <div class="phead"><h4>Engagement</h4><span class="chip">Locked</span></div>
+      <svg viewBox="0 0 340 130" role="img" aria-label="Engagement panel, locked">
+        <rect x="10" y="10" width="320" height="92" fill="url(#h1)"/>
+        <text x="170" y="54" text-anchor="middle" fill="#7a7a7a" font-family="Oswald" font-size="12" letter-spacing="2.5">SAVES · SHARES · COMMENTS</text>
+        <text x="170" y="76" text-anchor="middle" fill="#5f5f5f" font-family="Inter" font-size="10.5">The signals that decide distribution</text>
+      </svg>
+      <div class="pnote">Public likes are visible. <b>Saves and shares, the ones Meta rewards, are not</b></div>
+    </div>
+    <div class="panel">
+      <div class="phead"><h4>Profile visits and link taps</h4><span class="chip">Locked</span></div>
+      <svg viewBox="0 0 340 130" role="img" aria-label="Profile visits panel, locked">
+        <rect x="10" y="10" width="320" height="92" fill="url(#h1)"/>
+        <text x="170" y="54" text-anchor="middle" fill="#7a7a7a" font-family="Oswald" font-size="12" letter-spacing="2.5">ATTENTION TO SESSIONS</text>
+        <text x="170" y="76" text-anchor="middle" fill="#5f5f5f" font-family="Inter" font-size="10.5">Where the feed turns into site traffic</text>
+      </svg>
+      <div class="pnote">Today the bio link splits between the site and Amazon, <b>so even this traffic is being handed away</b></div>
+    </div>
+    <div class="panel">
+      <div class="phead"><h4>Best and worst content</h4><span class="chip">Locked</span></div>
+      <svg viewBox="0 0 340 130" role="img" aria-label="Content ranking panel, locked">
+        <rect x="10" y="10" width="320" height="92" fill="url(#h1)"/>
+        <text x="170" y="54" text-anchor="middle" fill="#7a7a7a" font-family="Oswald" font-size="12" letter-spacing="2.5">RANKED, WITH THE WHY</text>
+        <text x="170" y="76" text-anchor="middle" fill="#5f5f5f" font-family="Inter" font-size="10.5">And which winners go to paid</text>
+      </svg>
+      <div class="pnote">Ranking needs insights. <b>What is visible from outside: the grid reads generated, and the first tile does not match the brand the site sells</b></div>
+    </div>
+  </div>
+
+  <div class="drow dr2">
+    <div class="panel">
+      <div class="phead"><h4>What a full week looks like, once running</h4><span class="chip">Target, not actual</span></div>
+      <div class="mix">
+        <div class="mrow"><div class="ml">New Reels</div><div class="mb"><span style="width:22%"></span></div><div class="mn">2</div></div>
+        <div class="mrow"><div class="ml">Hook variations</div><div class="mb"><span style="width:33%"></span></div><div class="mn">3</div></div>
+        <div class="mrow"><div class="ml">Cutdowns</div><div class="mb"><span style="width:22%"></span></div><div class="mn">2</div></div>
+        <div class="mrow"><div class="ml">Statics and rebuilds</div><div class="mb"><span style="width:33%"></span></div><div class="mn">3</div></div>
+        <div class="mrow"><div class="ml">Feed posts</div><div class="mb"><span style="width:88%"></span></div><div class="mn">8</div></div>
+        <div class="mrow"><div class="ml">Stories</div><div class="mb"><span style="width:62%"></span></div><div class="mn">6</div></div>
+      </div>
+      <div class="pnote"><b>Ten ad pieces, eight posts, Stories on top and never counted against the post total.</b> Every week this shows what actually shipped against this shape</div>
+    </div>
+    <div class="panel">
+      <div class="phead"><h4>The inbox</h4><span class="chip live">Tracking now</span></div>
+      <div class="inbox">
+        <div class="ic"><div class="v">0</div><div class="l">Comments answered</div></div>
+        <div class="ic"><div class="v">0</div><div class="l">DMs answered</div></div>
+        <div class="ic"><div class="v">Present</div><div class="l">AI spam in comments</div></div>
+        <div class="ic"><div class="v">Under 24h</div><div class="l">Response time, from week one</div></div>
+      </div>
+      <div class="pnote"><b>A man of fifty checks whether anyone is home before he types in a card number.</b> Right now the answer he gets is no, and this is the cheapest thing on the page to fix</div>
+    </div>
+  </div>
+
+  <div class="verdict">
+    <h4>This week's call: build</h4>
+    <p>There is nothing running to keep or kill yet. <b>The account is not underperforming, it is unattended,</b> which is the easiest version of this problem to fix. Week one converts the Facebook Page, points the bio at one destination, clears the inbox, restarts the rhythm and opens the measurement. <b>Next week this page has real numbers in every panel, and the trend lines start.</b></p>
+  </div>
+</div>
+
+<div class="report" style="margin-top:2px">
+  <ul>
+    <li><b>Content produced and published,</b> both lanes, against the weekly commitment</li>
+    <li><b>Organic reach and non follower reach,</b> the truest growth signal</li>
+    <li><b>Net follower growth,</b> both channels</li>
+    <li><b>Engagement and profile visits,</b> plus saves and shares</li>
+    <li><b>Best and worst performing content,</b> named, with the why</li>
+    <li><b>Comments and DMs handled,</b> and how fast</li>
+    <li><b>What to produce or test next,</b> including which organic winners should become paid variations</li>
+  </ul>
+  <div class="tail"><b>Every line you asked for is on the page above, in the same order you wrote them,</b> and every week ends in a recommendation: keep, kill, or build more. Follower and post counts observed from the public profiles this month.</div>
+</div>
+
+<h2>How the week runs</h2>
+<div class="jobs">
+  <div class="st"><div class="n">01</div><h4>Material lands</h4><p>Ray's briefs and performance feedback, creator and influencer content, the new product photography. <b>One shared folder, everything flows through it.</b></p></div>
+  <div class="st"><div class="n">02</div><h4>I build</h4><p>The week's 8 to 12 ad pieces and the 6 to 10 feed posts, all from one design system. <b>Ads sized and named for the account, posts scheduled a week ahead.</b></p></div>
+  <div class="st"><div class="n">03</div><h4>It ships</h4><p>Ray takes what he wants live, his account, his call. The feed publishes on rhythm. <b>The inbox gets worked daily.</b> If Ray needs a variation, it comes back in a day.</p></div>
+  <div class="st"><div class="n">04</div><h4>We read, I reload</h4><p>The weekly report goes out, winners get variations before they fatigue, losers get killed. <b>Ray never waits on creative and never has to make it.</b></p></div>
+</div>
+
+<h2>Terms, and your trial question</h2>
+<div class="rules">
+  <div class="rule"><h4>Month to month, reevaluated every month</h4><p>You asked about a 30, 60 or 90 day trial. <b>These terms already are the trial.</b> No notice period, no auto renewal, no commitment. Every month you look at the report stack and decide if this is working. If it is not, you are never more than four weeks from done.</p></div>
+  <div class="rule"><h4>Everything is yours</h4><p>Accounts in your name, every asset handed over, the calendar and systems documented in writing. <b>If we ever part ways, you keep a machine that runs, not a hostage situation.</b></p></div>
+  <div class="rule"><h4>Week one builds and still ships</h4><p>Templates, the calendar, the shared folders, the report format, and converting the Facebook personal profile to a proper Business Page. <b>Pieces still go out in week one.</b> The 10 to 12 pace arrives once the system exists.</p></div>
+  <div class="rule"><h4>What I need to start</h4><p><b>From you: the green light, an introduction to Ray, and twenty minutes a week.</b> From Ray, once introduced: admin on Instagram and Facebook, view access to the ad account and site analytics so creative performance can be read without touching anything, and the shared folder his material lands in. Plus a straight on shot of each product on black.</p></div>
+</div>
+
+<div class="pull">
+  <p><b>The short version:</b> Ray gets a reliable stream of fresh, tested, ad ready creative he never has to make. The brand gets two channels that finally look alive, answered, and worth following. You get one clean invoice, two lines, $3,000, and a report every week that tells you exactly what you got for it. Added up at the market rates above, a normal month of this scope quotes at $6,000 to $10,000 across a creative shop and a social agency. <b>I am not charging that, because I would rather be measured monthly against the report stack than negotiate once against a rate card.</b></p>
+</div>
+
+<div class="foot">Renvir &nbsp;·&nbsp; Renewed man &nbsp;·&nbsp; Prepared by Rob</div>
+</div></body></html>
