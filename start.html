@@ -1,0 +1,247 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive,nosnippet"><title>Renvir · Thirty days</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--surface:#101010;--surface2:#151515;--line:rgba(255,255,255,.10);--line2:rgba(255,255,255,.06);--ink:#f2f2f2;--ink2:#a8a8a8;--ink3:#7a7a7a;--tun:#E8B980}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;padding:64px 36px 90px}
+.wrap{max-width:1180px;margin:0 auto}
+.k{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--tun);margin-bottom:18px}
+h1{font-family:'Oswald',sans-serif;font-weight:200;font-size:56px;letter-spacing:.04em;text-transform:uppercase;line-height:1.02}
+h1 b{font-weight:500}
+.lead{font-size:18px;line-height:1.6;color:var(--ink2);max-width:820px;margin:22px 0 44px}
+.lead b{color:var(--ink);font-weight:500}
+h2{font-family:'Oswald',sans-serif;font-weight:300;font-size:14px;letter-spacing:.32em;text-transform:uppercase;color:var(--ink3);padding-bottom:14px;border-bottom:1px solid var(--line);margin:60px 0 24px}
+h3{font-family:'Oswald',sans-serif;font-weight:500;font-size:20px;letter-spacing:.14em;text-transform:uppercase;margin:34px 0 6px}
+h3 span{font-weight:200;color:var(--tun);margin-left:12px;letter-spacing:.06em}
+.sub{font-size:14.5px;line-height:1.6;color:var(--ink2);max-width:760px;margin-bottom:18px}
+.sub b{color:var(--ink);font-weight:400}
+.p{font-size:15px;line-height:1.65;color:var(--ink2);max-width:820px;margin:10px 0}
+.p b{color:var(--ink);font-weight:400}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line2)}
+.stat{background:var(--surface);padding:24px 22px 24px}
+.stat .n{font-family:'Oswald',sans-serif;font-weight:200;font-size:40px;line-height:1;color:var(--tun);letter-spacing:.02em}
+.stat .n small{font-size:20px;color:var(--ink2)}
+.stat .l{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin-top:10px;line-height:1.5}
+
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line2)}
+.step{background:var(--surface);padding:22px 22px 24px}
+.step .when{font-family:'Oswald',sans-serif;font-weight:500;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--tun)}
+.step p{font-size:14px;line-height:1.55;color:var(--ink2);margin-top:8px}
+.step p b{color:var(--ink);font-weight:400}
+
+.tiles{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;background:var(--line2)}
+.tiles.o{grid-template-columns:repeat(3,1fr)}
+.tile{background:var(--surface);padding:18px 14px 18px;text-align:center}
+.tile svg{width:100%;height:auto;display:block;max-width:96px;margin:0 auto 12px}
+.tiles.o .tile svg{max-width:88px}
+.tile h4{font-family:'Oswald',sans-serif;font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;line-height:1.3}
+.tile p{font-size:11.5px;line-height:1.5;color:var(--ink3);margin-top:6px}
+.tile .cnt{font-family:'Oswald',sans-serif;font-weight:200;font-size:30px;color:var(--tun);line-height:1;margin-bottom:6px}
+
+.week{margin-top:2px;background:var(--surface2);padding:14px 20px;font-size:12.5px;letter-spacing:.06em;color:var(--ink2);display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+.week b{color:var(--ink);font-weight:500;letter-spacing:.2em;text-transform:uppercase;font-family:'Oswald',sans-serif;font-size:13px}
+.week i{font-style:normal;color:var(--tun)}
+
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line2)}
+.rule{background:var(--surface);padding:22px 24px}
+.rule h4{font-family:'Oswald',sans-serif;font-weight:500;font-size:15px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.rule p{font-size:14px;line-height:1.55;color:var(--ink2)}
+.rule p b{color:var(--ink);font-weight:400}
+
+.not{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line2)}
+.no{background:var(--surface);padding:18px 18px 20px}
+.no .w{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--tun);margin-bottom:8px}
+.no .w.g{color:var(--ink3)}
+.no p{font-size:13px;line-height:1.5;color:var(--ink2)}
+
+.stack{display:grid;grid-template-columns:1fr;gap:2px;background:var(--line2);max-width:820px}
+.layer{background:var(--surface);padding:18px 24px;display:grid;grid-template-columns:190px 1fr 120px;gap:20px;align-items:center}
+.layer.me{box-shadow:inset 3px 0 0 var(--tun)}
+.layer .t{font-family:'Oswald',sans-serif;font-weight:500;font-size:14px;letter-spacing:.16em;text-transform:uppercase}
+.layer .d{font-size:13.5px;line-height:1.5;color:var(--ink2)}
+.layer .o{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);text-align:right}
+.layer.me .o{color:var(--tun)}
+
+.pull{border-left:2px solid var(--tun);padding:22px 28px;margin-top:24px;background:var(--surface);max-width:820px}
+.pull p{font-size:16px;line-height:1.6;color:var(--ink2)}
+.pull p b{color:var(--ink);font-weight:500}
+
+.need{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line2)}
+.nd{background:var(--surface);padding:24px 26px}
+.nd h4{font-family:'Oswald',sans-serif;font-weight:500;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--tun);margin-bottom:14px}
+.nd h4.g{color:var(--ink3)}
+.nd ol,.nd ul{list-style:none}
+.nd li{font-size:14px;line-height:1.5;color:var(--ink2);padding:9px 0 9px 26px;position:relative;border-top:1px solid var(--line2)}
+.nd li:first-child{border-top:0}
+.nd ol li::before{content:counter(x);counter-increment:x;position:absolute;left:0;top:9px;font-family:'Oswald',sans-serif;font-weight:200;font-size:18px;color:var(--tun)}
+.nd ol{counter-reset:x}
+.nd ul li::before{content:"";position:absolute;left:0;top:17px;width:6px;height:1px;background:var(--ink3)}
+.nd li b{color:var(--ink);font-weight:400}
+
+
+@media (max-width:900px){.sign{grid-template-columns:1fr}}
+.sign{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line2)}
+.sg{background:var(--surface);padding:26px 26px 28px}
+.sg h4{font-family:'Oswald',sans-serif;font-weight:500;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--tun);margin-bottom:10px}
+.sg p{font-size:14px;line-height:1.6;color:var(--ink2)}
+.sg p b{color:var(--ink);font-weight:400}
+.btn{display:inline-block;margin-top:16px;padding:13px 22px;font-family:'Oswald',sans-serif;font-weight:500;font-size:14px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:#0a0a0a;background:var(--tun)}
+.btn.o{background:transparent;color:var(--tun);box-shadow:inset 0 0 0 1px var(--tun)}
+.sg .fine{font-size:12px;color:var(--ink3);margin-top:12px;line-height:1.55}
+.foot{margin-top:56px;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink3)}
+svg .f{fill:none;stroke:var(--ink3);stroke-width:1.4}
+svg .f2{fill:none;stroke:rgba(255,255,255,.22);stroke-width:1.2}
+svg .a{fill:none;stroke:var(--tun);stroke-width:1.6}
+svg .af{fill:var(--tun)}
+svg .g{fill:rgba(255,255,255,.07)}
+svg .g2{fill:rgba(255,255,255,.14)}
+svg .t{fill:var(--ink3);font-family:'Inter',sans-serif;font-size:7px;letter-spacing:.08em}
+@media (max-width:900px){.stats,.strip,.rules,.need{grid-template-columns:1fr}.tiles{grid-template-columns:repeat(2,1fr)}.tiles.o{grid-template-columns:repeat(3,1fr)}.not{grid-template-columns:1fr 1fr}.layer{grid-template-columns:1fr}.layer .o{text-align:left}h1{font-size:40px}}
+</style></head><body><div class="wrap">
+
+<div class="k">Renvir &nbsp;·&nbsp; Thirty days &nbsp;·&nbsp; September 2026</div>
+<h1>How <b>it runs.</b></h1>
+<p class="lead">The arrangement, written down, so neither of us has to remember what we agreed to. <b>Thirty days, we look at it honestly, and if it is not the right fit we shake hands and nothing changes between us.</b></p>
+
+<div class="stats">
+  <div class="stat"><div class="n">$3,000</div><div class="l">Thirty days, full scope</div></div>
+  <div class="stat"><div class="n">$1,500 <small>+ $1,500</small></div><div class="l">At the start, and at day 30</div></div>
+  <div class="stat"><div class="n">Your call</div><div class="l">When the clock starts. The build is already going</div></div>
+  <div class="stat"><div class="n">Day 30</div><div class="l">We sit down and decide the next thirty</div></div>
+</div>
+<p class="p" style="margin-top:16px"><b>Judged on the creative, not the revenue.</b> Hook rate, hold rate, click through, cost per click, concept against concept. CPA and ROAS once there is enough data to mean anything. Commercial from day one: every piece is supposed to sell a jar, and if it is not selling I will be the first to say so.</p>
+
+<h2>Starting now</h2>
+<div class="strip">
+  <div class="step"><div class="when">Already</div><p><b>The build is going.</b> I did not stop after the worlds page. The engine, the templates, the category rules, the hook bank are in progress now. Week one is the build week, same as the proposal, and content ships inside it.</p></div>
+  <div class="step"><div class="when">Today</div><p><b>Access lands.</b> Instagram and the Facebook Page, the intro to Ray, and your call on what leads. Nothing waits on it while I am building. <b>You tell me when the thirty days officially starts</b>, and I send the invoice for the first half that day.</p></div>
+  <div class="step"><div class="when">From week two</div><p><b>Full weekly count.</b> The ad batch to you and Ray every Tuesday night, organic scheduled a week ahead, the report every Friday.</p></div>
+</div>
+<p class="p" style="margin-top:16px">I am not waiting for the site. These thirty days are measured on the system, the content bank and what organic tells us, <b>not on revenue from a store you are not ready to send people to.</b></p>
+
+<h2>Where we start</h2>
+<p class="sub">Your call on what leads. If you are comfortable sharing rough margins, that sharpens my answer. Your business, your call. Tell me the lead and I build the library around it.</p>
+<div class="strip">
+  <div class="step"><div class="when">The bundle</div><p>The Complete Regimen carries the offer. Three jars, one cart.</p></div>
+  <div class="step"><div class="when">Supercharger</div><p>The moisturizer carries the claim and the story.</p></div>
+  <div class="step"><div class="when">The cleanser</div><p>Alpha Detox as the way in. Easiest first purchase.</p></div>
+</div>
+
+<h2>The scope</h2>
+
+<h3>Creative for you and Ray <span>8 to 12 a week</span></h3>
+<p class="sub">Ad ready pieces, sized and named for the account, with copy attached. <b>Every batch goes to both of you</b>, so you see everything Ray sees, the same day. <b>Every week has at least two new videos and two new statics in it.</b> A piece is any one of these. TikTok formats included.</p>
+<div class="tiles">
+  <div class="tile">
+    <svg viewBox="0 0 60 100"><rect class="f" x="4" y="2" width="52" height="96" rx="7"/><rect class="g" x="8" y="8" width="44" height="84" rx="3"/><polygon class="af" points="25,42 25,58 39,50"/><rect class="g2" x="12" y="76" width="26" height="3"/><rect class="g2" x="12" y="82" width="18" height="3"/></svg>
+    <h4>Reel or short video</h4><p>New, built from a still or a plate</p>
+  </div>
+  <div class="tile">
+    <svg viewBox="0 0 60 100"><rect class="f" x="4" y="12" width="52" height="76" rx="3"/><rect class="g" x="8" y="16" width="44" height="48"/><rect class="af" x="12" y="20" width="9" height="9" rx="4.5" opacity=".9"/><rect class="g2" x="12" y="68" width="30" height="4"/><rect class="g2" x="12" y="75" width="22" height="4"/><rect class="a" x="38" y="50" width="10" height="10"/></svg>
+    <h4>Static</h4><p>New, feed or story, the real jar in frame</p>
+  </div>
+  <div class="tile">
+    <svg viewBox="0 0 60 100"><rect class="f2" x="14" y="16" width="44" height="66" rx="3"/><rect class="f2" x="9" y="13" width="44" height="66" rx="3"/><rect class="f" x="4" y="10" width="44" height="66" rx="3"/><rect class="g" x="8" y="14" width="36" height="42"/><rect class="g2" x="8" y="60" width="24" height="3"/><rect class="g2" x="8" y="66" width="16" height="3"/><circle class="af" cx="22" cy="88" r="2"/><circle class="f2" cx="30" cy="88" r="2"/><circle class="f2" cx="38" cy="88" r="2"/></svg>
+    <h4>Carousel</h4><p>Three to five cards, one idea</p>
+  </div>
+  <div class="tile">
+    <svg viewBox="0 0 60 100"><rect class="f" x="4" y="2" width="52" height="96" rx="7"/><rect class="g" x="8" y="8" width="44" height="84" rx="3"/><rect class="af" x="10" y="11" width="12" height="1.8"/><rect class="g2" x="24" y="11" width="12" height="1.8"/><rect class="g2" x="38" y="11" width="12" height="1.8"/><rect class="g2" x="14" y="64" width="32" height="3"/><rect class="a" x="18" y="76" width="24" height="8" rx="4"/></svg>
+    <h4>Story cut</h4><p>Full screen, tap through, link up</p>
+  </div>
+  <div class="tile">
+    <svg viewBox="0 0 60 100"><rect class="f" x="4" y="2" width="52" height="96" rx="7"/><rect class="g" x="8" y="8" width="44" height="84" rx="3"/><rect class="af" x="8" y="8" width="44" height="22" opacity=".28"/><rect class="a" x="8" y="8" width="44" height="22"/><text class="t" x="30" y="21" text-anchor="middle">0 TO 3S</text><rect class="g2" x="12" y="40" width="10" height="3"/><rect class="g2" x="26" y="40" width="10" height="3"/><rect class="g2" x="40" y="40" width="8" height="3"/></svg>
+    <h4>Hook variation</h4><p>Same body, new first three seconds</p>
+  </div>
+  <div class="tile">
+    <svg viewBox="0 0 60 100"><rect class="f" x="4" y="2" width="52" height="96" rx="7"/><rect class="g" x="8" y="8" width="44" height="84" rx="3"/><rect class="g2" x="12" y="44" width="36" height="3"/><rect class="af" x="12" y="44" width="14" height="3"/><text class="t" x="12" y="40">15S</text><rect class="g2" x="12" y="58" width="14" height="3"/><rect class="af" x="12" y="58" width="14" height="3"/><text class="t" x="12" y="54">6S</text></svg>
+    <h4>Cutdown</h4><p>Shorter edit of a piece that works</p>
+  </div>
+  <div class="tile">
+    <svg viewBox="0 0 60 100"><rect class="f" x="4" y="20" width="18" height="32" rx="2"/><rect class="g" x="6" y="22" width="14" height="28"/><rect class="f" x="26" y="26" width="20" height="20" rx="2"/><rect class="g" x="28" y="28" width="16" height="16"/><rect class="f" x="35" y="54" width="20" height="25" rx="2"/><rect class="g" x="37" y="56" width="16" height="21"/><path class="a" d="M22 36 L26 36" /><path class="a" d="M36 46 L36 54"/><text class="t" x="30" y="90" text-anchor="middle">9:16 · 1:1 · 4:5</text></svg>
+    <h4>Rebuild</h4><p>An existing piece for another placement or platform, TikTok included</p>
+  </div>
+</div>
+<div class="week"><b>A twelve piece week</b> <span><i>2</i> new videos</span> <span><i>2</i> new statics</span> <span><i>1</i> carousel</span> <span><i>1</i> Story cut</span> <span><i>2</i> hook variations</span> <span><i>2</i> cutdowns</span> <span><i>2</i> rebuilds</span></div>
+
+<h3>Organic Instagram and Facebook <span>6 to 10 posts a week</span></h3>
+<p class="sub">Typically two Reels, a carousel and five statics. <b>Stories on top, near daily, never counted. Inbox and comments worked daily.</b> A calendar sitting a week ahead in a shared sheet you can open any time.</p>
+<div class="tiles o">
+  <div class="tile"><div class="cnt">2</div><h4>Reels</h4><p>A week</p></div>
+  <div class="tile"><div class="cnt">1</div><h4>Carousel</h4><p>A week</p></div>
+  <div class="tile"><div class="cnt">5</div><h4>Statics</h4><p>A week</p></div>
+</div>
+<div class="week"><b>On top</b> <span>Stories near daily, never counted</span> <span>Inbox and comments daily</span> <span>One page report every Friday, ending in keep, kill or build more</span></div>
+
+<h3>How it arrives</h3>
+<div class="strip">
+  <div class="step"><div class="when">Tuesday night</div><p><b>The ad batch reaches you and Ray</b>, so he has the full week to run it instead of getting it on a Friday, and you see it the same moment he does.</p></div>
+  <div class="step"><div class="when">A week ahead</div><p><b>Organic sits scheduled</b> in a shared sheet you can open any time. Anything you want changed or pulled, mark it and it does not run. Silence means it runs, so the feed keeps moving while you are traveling. <b>Your ideas, lines and photos go in the same sheet and I build from them.</b></p></div>
+  <div class="step"><div class="when">Friday</div><p><b>One page.</b> What ran, what it did, and one recommendation: keep, kill or build more.</p></div>
+</div>
+<p class="p" style="margin-top:14px">If a piece works in both lanes, it runs in both. <b>Tell me how you want to run that sheet.</b> Google Sheets works, we can both be in it live and iterate in one place. If you would rather something else, say so and we use that.</p>
+
+<h3>The fine print</h3>
+<div class="rules">
+  <div class="rule"><h4>Past twelve in a week</h4><p><b>$150 a piece, quoted before it is made.</b> That is there so nothing ever lands on you unannounced, not because I am counting.</p></div>
+  <div class="rule"><h4>I am not a clock watcher</h4><p>The numbers are the shape of a month, not a meter. If something needs another pass it gets another pass. If a week runs heavy because we are onto something, I am not sitting there with a tally. <b>I am a good partner and I will invest in this.</b></p></div>
+</div>
+
+<h3>Not in it</h3>
+<div class="not">
+  <div class="no"><div class="w">Ray</div><p>The ad account, budgets, targeting and scaling</p></div>
+  <div class="no"><div class="w">Ray</div><p>Amazon and TikTok account work</p></div>
+  <div class="no"><div class="w">Web team</div><p>Site copy, messaging, the brand book, landing pages</p></div>
+  <div class="no"><div class="w g">Out</div><p>Email, lifecycle and retention, same as the proposal</p></div>
+</div>
+<p class="p" style="margin-top:14px">One thing worth knowing, and it is not a scope grab. <b>The technical side is something I do.</b> Landing pages, pixels and event tracking, webhooks, the plumbing between the store and the ad platforms. It belongs with your web team. If anything there gets stuck, or you want a second set of eyes, tell me and I will sort it out.</p>
+
+<h2>The build</h2>
+<p class="sub">So you are picturing it right. It does not run on Express, Firefly and Make. Those are fine at the publishing end. Underneath is a different stack, and the part that matters most is the layer on top of it.</p>
+<div class="stack">
+  <div class="layer"><div class="t">Publishing</div><div class="d">Express, Firefly, Make, Meta. Layout, routing, scheduling. Fine at what they do.</div><div class="o">Yours already</div></div>
+  <div class="layer"><div class="t">The models</div><div class="d">Specialized, professional tier rather than consumer. One for stills, another for motion, another for voice and audio, others for copy. They swap as better ones arrive, and they should.</div><div class="o">On my card, inside the fee</div></div>
+  <div class="layer me"><div class="t">What I build on top</div><div class="d">The templates, the category rules, the prompt structures, the look itself. This is the part that does not swap. It carries across whichever model is current, and it is what outlasts any single tool.</div><div class="o">Yours. Hands over in Claude</div></div>
+</div>
+
+<h2>How we work together</h2>
+<div class="pull">
+  <p><b>This is the one I most want to get right.</b> You have real instincts. NEVER STOP and the rusty fence line are both proof, and I want your ideas coming at me constantly. I also want to be bringing you things you did not ask for, because that is the other half of what you are paying for. The first hour: how you like to give feedback, how fast you want to see things, what you want to be in the room for, and your honest read on what I have shown you so far. <b>An hour on Friday, whenever suits.</b></p>
+</div>
+
+<h2>What I need</h2>
+<div class="need">
+  <div class="nd"><h4>Today</h4>
+    <ol>
+      <li><b>Admin on Instagram and the Facebook Page.</b> I found the Page. A few housekeeping things on it, sent separately.</li>
+      <li><b>An intro to Ray</b>, and read access to whatever reporting he has running. I do not need his ad account. I need to see what is working.</li>
+      <li><b>Your call on what leads</b>, and when you want the thirty days to officially start.</li>
+    </ol>
+  </div>
+  <div class="nd"><h4 class="g">Along the way</h4>
+    <ul>
+      <li>The final logo files once your designer settles them. Until then I run the sprocket, which is right for everything on shelf anyway.</li>
+      <li>An intro to the web team and your okay to talk to them directly.</li>
+      <li>The Indy date.</li>
+      <li>The brand doc whenever it exists.</li>
+      <li>Twenty minutes a week.</li>
+      <li><b>Product photography is handled.</b> I have the samples and I will shoot anything your drop does not cover.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Sign off</h2>
+<div class="sign">
+  <div class="sg"><h4>Agreed</h4>
+    <p>If this page is what you were picturing, that button opens a one line reply back to me and we are on. <b>Your reply is the record.</b> No signatures, no portal.</p>
+    <a class="btn" href="mailto:robschraderca@gmail.com?subject=Agreed%3A%20Renvir%2C%20thirty%20days&body=Rob%2C%0A%0AAgreed%20to%20the%20thirty%20days%20as%20written%20at%20robschraderca.github.io/renvir/start.html.%0A%0AAlex">Agreed, let's go</a>
+    <p class="fine">$3,000 for thirty days, $1,500 at the start and $1,500 at day 30, scope as written above, either of us can call it at day 30 with no hard feelings.</p>
+  </div>
+  <div class="sg"><h4>The first half</h4>
+    <p>Invoice RSS-1041 for $1,500.00 is in your inbox with the bank transfer details and the W-9. <b>Bank transfer has no fee.</b> If you would rather use a card, it runs $1,545.00, which includes a 3% credit card processing fee.</p>
+    <p class="fine">Reply and the card link comes back the same day. Processed by Stripe on behalf of RSS Financial Holdings LLC. Debit cards are not surcharged.</p>
+  </div>
+</div>
+
+<div class="foot">Renvir &nbsp;·&nbsp; Renewed man &nbsp;·&nbsp; Prepared by Rob &nbsp;·&nbsp; September 3, 2026</div>
+</div></body></html>
