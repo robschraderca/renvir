@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Renvir W02 Reels for Approval</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--ink:#0a0a0a;--panel:#151515;--line:#262626;--text:#e9e7e2;--smoke:#a9a7a2;--dim:#6f6d69;--gold:#e8b980;--white:#fff;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--text);font-family:Inter,system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.5}
+header{padding:36px 24px 8px;max-width:1120px;margin:0 auto}
+header .wm{font-family:Oswald,Impact,sans-serif;font-weight:300;letter-spacing:.42em;font-size:22px;color:var(--white)}
+header .wm sup{font-size:9px;letter-spacing:0;margin-left:2px}
+header h1{font-family:Oswald,Impact,sans-serif;font-weight:500;font-size:30px;margin:18px 0 6px;letter-spacing:.02em;text-wrap:balance}
+header p{margin:0 0 10px;color:var(--smoke);max-width:66ch}
+header p b{color:var(--gold);font-weight:500}
+.fromrob{max-width:66ch;border-left:2px solid var(--gold);padding:10px 16px;margin:18px 0 6px;color:var(--text);font-size:14px}
+.fromrob b{display:block;font-family:Oswald,Impact,sans-serif;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:11px;color:var(--gold);margin-bottom:6px}
+.toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;margin:18px 0 4px;gap:2px}
+.toggle button{background:none;border:0;color:var(--smoke);font:inherit;font-weight:500;padding:7px 18px;border-radius:999px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--text);color:var(--ink)}
+.toggle button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+main{max-width:1120px;margin:0 auto;padding:12px 24px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:40px 48px;align-items:start}
+.post{display:grid;gap:18px}
+.post h2{font-family:Oswald,Impact,sans-serif;font-weight:500;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0}
+.post h2 span{color:var(--dim);letter-spacing:.08em;margin-left:10px;text-transform:none;font-family:Inter,sans-serif;font-weight:400}
+.phone{width:min(100%,390px);margin:0 auto;background:#000;border:10px solid #1c1c1c;border-radius:44px;box-shadow:0 0 0 1px #2c2c2c,0 30px 60px rgba(0,0,0,.6);overflow:hidden;position:relative}
+.notch{height:34px;display:flex;justify-content:space-between;align-items:center;padding:0 22px;font-size:12px;font-weight:600;color:#fff}
+.notch i{width:110px;height:24px;background:#1c1c1c;border-radius:14px;position:absolute;left:50%;top:6px;transform:translateX(-50%)}
+.screen{background:#000;color:#fff;min-height:720px;position:relative}
+.screen.fb{background:#18191a}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;font-weight:600;font-size:15px}
+.bar .logo{font-family:Oswald,Impact,sans-serif;font-weight:500;letter-spacing:.02em;font-size:20px}
+.acct{display:flex;align-items:center;gap:10px;padding:8px 12px}
+.av{width:34px;height:34px;border-radius:50%;background:#0a0a0a;border:1.5px solid #333;display:grid;place-items:center;font-family:Oswald,Impact,sans-serif;font-weight:300;letter-spacing:.2em;font-size:9px;color:#fff;padding-left:2px}
+.acct .n{font-weight:600;font-size:13px;line-height:1.2}
+.acct .n small{display:block;font-weight:400;color:#a8a8a8;font-size:12px}
+.acct .dots{margin-left:auto;color:#fff;letter-spacing:2px}
+.screen video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;background:#000}
+.reelwrap{position:relative}
+.reelwrap .ui{position:absolute;left:0;right:0;bottom:0;padding:14px 12px 16px;background:linear-gradient(to top,rgba(0,0,0,.75),rgba(0,0,0,0));font-size:13px;line-height:1.4}
+.reelwrap .ui b{font-weight:600}
+.reelwrap .ui .tags{color:#cfe3ff}
+.reelwrap .ui .snd{font-size:11px;color:#ddd;margin-top:6px}
+.cap{padding:8px 12px 14px;font-size:13px;line-height:1.45;white-space:pre-line}
+.cap b{font-weight:600}
+.cap .tags{color:#7fb3ff}
+.screen.fb .cap{padding:10px 14px 6px;font-size:14px}
+.screen.fb .cap .tags{color:#4a8cff}
+.fbmeta{padding:8px 14px;border-top:1px solid #2f3031;color:#b0b3b8;font-size:12px;display:flex;justify-content:space-between}
+.fbacts{display:flex;justify-content:space-around;border-top:1px solid #2f3031;padding:8px 0;color:#b0b3b8;font-size:13px;font-weight:600}
+.link{margin:0 14px 10px;border:1px solid #2f3031;background:#242526;border-radius:8px;padding:10px 12px;font-size:12px;color:#b0b3b8;display:block;text-decoration:none}
+.link:hover{border-color:#4a8cff}.link .lu{display:block;font-size:11px;letter-spacing:.04em;color:#8a8d91;margin-bottom:2px}.link b{display:block;color:#e4e6eb;font-size:14px;font-weight:600}
+.meta{display:grid;grid-template-columns:120px 1fr;gap:8px 16px;font-size:13px;border-top:1px solid var(--line);padding-top:16px}
+.meta dt{color:var(--dim);font-family:Oswald,Impact,sans-serif;font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:11px;padding-top:2px}
+.meta dd{margin:0;color:var(--text)}
+.meta dd.q{color:var(--smoke);word-break:break-all}
+.cut{border-top:1px solid var(--line);padding-top:16px}
+.cut h3{font-family:Oswald,Impact,sans-serif;font-weight:500;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin:0 0 10px}
+.cut video{display:block;width:min(100%,260px);aspect-ratio:4/5;object-fit:cover;border:1px solid var(--line);background:#000}
+.cut p{margin:8px 0 0;color:var(--smoke);font-size:12.5px;max-width:52ch}
+.plan{max-width:1120px;margin:0 auto;padding:8px 24px 28px}
+.plan h2{font-family:Oswald,Impact,sans-serif;font-weight:500;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+.plan p{margin:0 0 12px;color:var(--smoke);max-width:66ch}
+.plan table{border-collapse:collapse;font-size:13px;min-width:min(100%,640px)}
+.plan th,.plan td{text-align:left;padding:8px 18px 8px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.plan th{color:var(--dim);font-family:Oswald,Impact,sans-serif;font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:11px}
+.plan td:first-child{white-space:nowrap;color:var(--text)}
+.plan td{color:var(--smoke)}
+.plan .tw{overflow-x:auto}
+.note{max-width:1120px;margin:0 auto;padding:20px 24px 48px;color:var(--smoke);font-size:13px;border-top:1px solid var(--line)}
+.note b{color:var(--text);font-weight:500}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header>
+  <div class="wm">RENVIR<sup>&reg;</sup></div>
+  <h1>Week two reels for approval</h1>
+  <p>Two reels with sound, shown the way they will run on a phone, plus the 4x5 feed cutdown of each. Switch between the Instagram and Facebook versions. Captions, hashtags, alt text and tags are final unless you change them. <b>Reply on the email thread with a yes or with edits.</b> Tap a video to play it with sound.</p>
+  <div class="fromrob"><b>From Rob</b>High Octane is the rework after Alex's notes on the first pass: the car runs at one steady speed, the smoke drifts and clears instead of sitting there, and the sound is pinned to the moment the car crosses. Metal Rusts is the video version of the static you both approved, with a full read of the ingredients.<br><br>Moving forward, for the next couple of days I am on product specific work only: the bundle pieces (the whole routine, wash to serum to Supercharger) and UGC style application, real hands using the real product. Nothing else goes into the queue until those are done.</div>
+  <div class="toggle" role="group" aria-label="Platform">
+    <button type="button" data-p="ig" aria-pressed="true">Instagram</button>
+    <button type="button" data-p="fb" aria-pressed="false">Facebook</button>
+  </div>
+</header>
+<main>
+
+<section class="post" id="high-octane">
+<h2>High Octane<span>Supercharger reel, 9x16, 13 s</span></h2>
+<div class="phone" data-screen="ig"><div class="notch"><span>9:41</span><i></i><span>&#9679;&#9679;&#9679;</span></div><div class="screen">
+<div class="bar"><span class="logo">Reels</span><span>&#9906;</span></div>
+<div class="reelwrap">
+<video src="renvir_W02_reel_high_octane_v26_9x16.mp4" playsinline loop controls preload="metadata" aria-label="Video of a jar of Renvir Supercharger moisturizer for men on a concrete pit wall at dusk as a race car passes on the track behind it, with the headline High Octane, Low Maintenance."></video>
+<div class="ui"><b>renvirofficial</b><br>High Octane. Low Maintenance. Supercharger. Seven performance ingredients in one jar, thirty seconds a morning... <span class="tags">more</span><div class="snd">&#9834; renvirofficial &middot; Original audio</div></div>
+</div>
+<div class="cap"><b>renvirofficial</b> High Octane. Low Maintenance.
+Supercharger. A fragrance free vitamin C moisturizer for men. Seven performance ingredients in one jar, thirty seconds a morning, then get on with the day. renvirco.com
+
+<span class="tags">#renvir #mensskincare #motorsportlife #carguy #renewedman</span></div>
+</div></div>
+<div class="phone" data-screen="fb" hidden><div class="notch"><span>9:41</span><i></i><span>&#9679;&#9679;&#9679;</span></div><div class="screen fb">
+<div class="bar"><span class="logo" style="color:#4a8cff">facebook</span><span>&#9906; &nbsp;&#9993;</span></div>
+<div class="acct"><div class="av">RV</div><div class="n">Renvir<small>Just now &middot; &#127760;</small></div><span class="dots">&middot;&middot;&middot;</span></div>
+<div class="cap">High Octane. Low Maintenance. Supercharger is a fragrance free vitamin C moisturizer for men: seven performance ingredients in one jar, thirty seconds a morning, then get on with the day.
+www.renvirco.com/products/supercharger
+<span class="tags">#renvir #mensskincare</span></div>
+<video src="renvir_W02_reel_high_octane_v26_9x16.mp4" playsinline loop controls preload="metadata" aria-label="Video of a jar of Renvir Supercharger moisturizer for men on a concrete pit wall at dusk as a race car passes on the track behind it, with the headline High Octane, Low Maintenance."></video>
+<div class="fbmeta"><span>&#128077; 24</span><span>3 comments &middot; 2 shares</span></div>
+<div class="fbacts"><span>Like</span><span>Comment</span><span>Share</span></div>
+</div></div>
+<dl class="meta">
+<dt>File</dt><dd class="q">renvir_W02_reel_high_octane_v26_9x16.mp4</dd>
+<dt>Alt text</dt><dd>Video of a jar of Renvir Supercharger moisturizer for men on a concrete pit wall at dusk as a race car passes on the track behind it, with the headline High Octane, Low Maintenance.</dd>
+<dt>Sound</dt><dd>Rob's voice, the car pass, a low music bed. Captions on for sound off viewing (the headline is on screen, so it reads without audio).</dd>
+<dt>Location</dt><dd>None</dd>
+<dt>Mentions</dt><dd>None now. If it runs during Indy week, @indianapolismotorspeedway and @lamborghinisc.</dd>
+<dt>Product tag</dt><dd>Supercharger</dd>
+<dt>Facebook link</dt><dd class="q">https://www.renvirco.com/products/supercharger?utm_source=facebook&amp;utm_medium=organic&amp;utm_campaign=w02_high_octane&amp;utm_content=high_octane_reel</dd>
+<dt>Bio link</dt><dd class="q">https://www.renvirco.com/products/supercharger?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=w02_high_octane</dd>
+<dt>Hashtags</dt><dd>Instagram five, Facebook two, in the caption after a line break, never in a comment.</dd>
+<dt>Paid</dt><dd>Same file for Ray's placements; the 4x5 below for feed.</dd>
+</dl>
+<div class="cut"><h3>Feed cutdown, 4x5</h3>
+<video src="renvir_W02_cutdown_high_octane_v26_4x5.mp4" playsinline loop controls preload="metadata" aria-label="Four by five feed version of the High Octane Supercharger video."></video>
+<p>renvir_W02_cutdown_high_octane_v26_4x5.mp4. Same cut, same sound, framed for the feed and for Ray's 4x5 placements. Wordmark top left, headline and site kept.</p></div>
+</section>
+
+<section class="post" id="metal-rusts">
+<h2>Metal Rusts<span>Supercharger reel, 9x16, 18 s</span></h2>
+<div class="phone" data-screen="ig"><div class="notch"><span>9:41</span><i></i><span>&#9679;&#9679;&#9679;</span></div><div class="screen">
+<div class="bar"><span class="logo">Reels</span><span>&#9906;</span></div>
+<div class="reelwrap">
+<video src="renvir_W02_reel_rust_metal_black_v10_9x16.mp4" playsinline loop controls preload="metadata" aria-label="Video of rain falling on a jar of Renvir Supercharger fragrance free vitamin C moisturizer for men on a rusted iron railing in Ghent, Belgium, with the headline Metal rusts, skin doesn't have to."></video>
+<div class="ui"><b>renvirofficial</b> &middot; Ghent, Belgium<br>Metal rusts. Skin doesn't have to. Supercharge it. Fragrance free. Hyaluronic acid keeps skin hydrated... <span class="tags">more</span><div class="snd">&#9834; renvirofficial &middot; Original audio</div></div>
+</div>
+<div class="cap"><b>renvirofficial</b> Metal rusts. Skin doesn't have to. Supercharge it.
+Fragrance free. Hyaluronic acid keeps skin hydrated, vitamin C for a brighter look, chamomile and aloe to soothe. Seven performance ingredients, one Supercharger. Shot on a canal railing in Ghent, Belgium. renvirco.com
+
+<span class="tags">#renvir #mensskincare #skincareformen #moisturizer #menover50</span></div>
+</div></div>
+<div class="phone" data-screen="fb" hidden><div class="notch"><span>9:41</span><i></i><span>&#9679;&#9679;&#9679;</span></div><div class="screen fb">
+<div class="bar"><span class="logo" style="color:#4a8cff">facebook</span><span>&#9906; &nbsp;&#9993;</span></div>
+<div class="acct"><div class="av">RV</div><div class="n">Renvir<small>Just now &middot; &#127760;</small></div><span class="dots">&middot;&middot;&middot;</span></div>
+<div class="cap">Metal rusts. Skin doesn't have to. Supercharge it. Fragrance free, with hyaluronic acid to keep skin hydrated, vitamin C for a brighter look, chamomile and aloe to soothe. Seven performance ingredients, one Supercharger.
+www.renvirco.com/products/supercharger
+<span class="tags">#renvir #menover50</span></div>
+<video src="renvir_W02_reel_rust_metal_black_v10_9x16.mp4" playsinline loop controls preload="metadata" aria-label="Video of rain falling on a jar of Renvir Supercharger fragrance free vitamin C moisturizer for men on a rusted iron railing in Ghent, Belgium, with the headline Metal rusts, skin doesn't have to."></video>
+<div class="fbmeta"><span>&#128077; 24</span><span>3 comments &middot; 2 shares</span></div>
+<div class="fbacts"><span>Like</span><span>Comment</span><span>Share</span></div>
+</div></div>
+<dl class="meta">
+<dt>File</dt><dd class="q">renvir_W02_reel_rust_metal_black_v10_9x16.mp4</dd>
+<dt>Alt text</dt><dd>Video of rain falling on a jar of Renvir Supercharger fragrance free vitamin C moisturizer for men on a rusted iron railing in Ghent, Belgium, with the headline Metal rusts, skin doesn't have to.</dd>
+<dt>Sound</dt><dd>Rob's voice over rain, nothing else. Every line is also on screen as type, so it reads with the sound off.</dd>
+<dt>Location</dt><dd>Ghent, Belgium</dd>
+<dt>Mentions</dt><dd>@danzealex (Alex's photo, Alex's line). Say no if you would rather not be tagged.</dd>
+<dt>Product tag</dt><dd>Supercharger</dd>
+<dt>Facebook link</dt><dd class="q">https://www.renvirco.com/products/supercharger?utm_source=facebook&amp;utm_medium=organic&amp;utm_campaign=w02_rust&amp;utm_content=metal_rusts_reel</dd>
+<dt>Bio link</dt><dd class="q">https://www.renvirco.com/products/supercharger?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=w02_rust</dd>
+<dt>Hashtags</dt><dd>Instagram five, Facebook two, in the caption after a line break, never in a comment.</dd>
+<dt>Paid</dt><dd>Same file for Ray's placements; the 4x5 below for feed. The Supercharge It version of the same reel follows once this one is approved.</dd>
+</dl>
+<div class="cut"><h3>Feed cutdown, 4x5</h3>
+<video src="renvir_W02_cutdown_rust_metal_black_v10_4x5.mp4" playsinline loop controls preload="metadata" aria-label="Four by five feed version of the Metal Rusts Supercharger video."></video>
+<p>renvir_W02_cutdown_rust_metal_black_v10_4x5.mp4. Same cut, same sound, rebuilt for the feed frame so the wordmark, headline and site all stay on screen.</p></div>
+</section>
+
+</main>
+<div class="plan">
+<h2>Posting plan, once approved</h2>
+<p>One post a day at most, four or five a week, every one scheduled with a date and time. Reels go out first thing in the morning on Instagram, 7:30 am Eastern, and the same piece lands on Facebook four to six hours later with its own caption. Tuesday to Thursday carry the strong pieces. Every feed post also goes to Stories the same day, and the best reel stays pinned at the top of the grid.</p>
+<div class="tw"><table>
+<tr><th>Day</th><th>Piece</th><th>Where</th></tr>
+<tr><td>Wed Sept 9</td><td>High Octane reel</td><td>Instagram 7:30 am ET, Facebook early afternoon, Stories</td></tr>
+<tr><td>Thu Sept 10</td><td>Metal Rusts reel</td><td>Instagram 7:30 am ET, Facebook early afternoon, Stories</td></tr>
+<tr><td>Fri Sept 11</td><td>The routine carousel (Alpha Detox, Citrus Revive, Supercharger)</td><td>Instagram and Facebook, organic</td></tr>
+<tr><td>Mon Sept 14</td><td>Supercharge It, the second version of the rain reel</td><td>Instagram 7:30 am ET, Facebook early afternoon, Stories</td></tr>
+<tr><td>Tue Sept 15</td><td>Next batch: the bundle pieces and UGC style application</td><td>To you for approval Monday night</td></tr>
+</table></div>
+<p>Ray takes the same files into paid whenever he wants them; the 4x5 cutdowns are for feed placements. Say yes on the thread and Rob schedules the week.</p>
+</div>
+<div class="note"><b>What was checked before this went up.</b> Registered R on the wordmark and TM on Supercharger in both pieces. The real jar in both, label unchanged. Every claim in the voice and on screen is in the language already on the Amazon listing (hydrated, brighter look, soothe): nothing about treating anything. Voice level measured line by line so nothing drops out. Five hashtags on Instagram, two on Facebook, one branded, two category, two for the post. Alt text names the product and its use. Rob</div>
+<script>
+(function(){
+  var btns=document.querySelectorAll('.toggle button');
+  function set(p){
+    btns.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.p===p))});
+    document.querySelectorAll('[data-screen]').forEach(function(s){s.hidden=s.dataset.screen!==p});
+    document.querySelectorAll('video').forEach(function(v){v.pause()});
+    try{localStorage.setItem('renvir_prev_platform',p)}catch(e){}
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.p)})});
+  var saved='ig'; try{saved=localStorage.getItem('renvir_prev_platform')||'ig'}catch(e){}
+  set(saved);
+})();
+</script>
+</body>
+</html>
