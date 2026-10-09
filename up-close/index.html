@@ -3,193 +3,68 @@
 <style>
 :root{--bg:#0a0a0a;--surface:#101010;--surface2:#151515;--line:rgba(255,255,255,.10);--line2:rgba(255,255,255,.06);--ink:#f2f2f2;--ink2:#a8a8a8;--ink3:#7a7a7a;--tun:#E8B980;color-scheme:dark}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;padding:56px 28px 90px}
-.wrap{max-width:1180px;margin:0 auto}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;padding:56px 28px 80px}
+.wrap{max-width:900px;margin:0 auto}
 .wm{font-family:'Oswald',sans-serif;font-weight:300;letter-spacing:.42em;font-size:22px;color:#fff}
 .wm sup{font-size:9px;letter-spacing:0;margin-left:2px}
-.k{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--tun);margin:40px 0 18px}
+.k{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--tun);margin:36px 0 16px}
 h1{font-family:'Oswald',sans-serif;font-weight:200;font-size:clamp(40px,6vw,60px);letter-spacing:.04em;text-transform:uppercase;line-height:1.02}
 h1 b{font-weight:500}
-.lead{font-size:18px;line-height:1.6;color:var(--ink2);max-width:820px;margin:22px 0 10px}
+.lead{font-size:18px;line-height:1.6;color:var(--ink2);margin:20px 0 6px}
 .lead b{color:var(--ink);font-weight:500}
-.fromrob{max-width:820px;border-left:2px solid var(--tun);padding:14px 20px;margin:28px 0 6px;color:var(--ink);font-size:15px;line-height:1.6;background:var(--surface)}
-.fromrob b{display:block;font-family:'Oswald',sans-serif;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:11px;color:var(--tun);margin-bottom:8px}
-h2{font-family:'Oswald',sans-serif;font-weight:300;font-size:14px;letter-spacing:.32em;text-transform:uppercase;color:var(--ink3);padding-bottom:14px;border-bottom:1px solid var(--line);margin:64px 0 24px}
-h3{font-family:'Oswald',sans-serif;font-weight:500;font-size:20px;letter-spacing:.14em;text-transform:uppercase;margin:34px 0 8px}
-h3 span{font-weight:200;color:var(--tun);margin-left:12px;letter-spacing:.06em}
-.p{font-size:15px;line-height:1.7;color:var(--ink2);max-width:820px;margin:10px 0}
+.lead a{color:var(--tun);text-decoration:none;border-bottom:1px solid rgba(232,185,128,.35)}
+h2{font-family:'Oswald',sans-serif;font-weight:300;font-size:14px;letter-spacing:.32em;text-transform:uppercase;color:var(--ink3);padding-bottom:12px;border-bottom:1px solid var(--line);margin:48px 0 18px}
+.p{font-size:15px;line-height:1.7;color:var(--ink2);margin:10px 0}
 .p b{color:var(--ink);font-weight:400}
-.p a{color:var(--tun);text-decoration:none;border-bottom:1px solid rgba(232,185,128,.35)}
-.big{font-family:'Oswald',sans-serif;font-weight:200;font-size:clamp(26px,3.4vw,36px);line-height:1.28;text-transform:uppercase;letter-spacing:.02em;color:var(--ink);max-width:900px;margin:18px 0 10px}
+.big{font-family:'Oswald',sans-serif;font-weight:200;font-size:clamp(24px,3.2vw,32px);line-height:1.3;text-transform:uppercase;letter-spacing:.02em;color:var(--ink);margin:14px 0 8px}
 .big b{font-weight:500}
-.strip{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;background:var(--line2);margin:18px 0 8px}
-.strip div{background:var(--surface);padding:16px 12px 18px;min-height:96px}
-.strip b{display:block;font-family:'Oswald',sans-serif;font-weight:300;font-size:18px;color:var(--tun);letter-spacing:.04em;line-height:1;margin-bottom:8px}
-.strip span{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);line-height:1.5}
-.credit{font-size:12px;color:var(--ink3);margin:8px 0 0;letter-spacing:.04em}
-.credit a{color:var(--ink2);text-decoration:none;border-bottom:1px solid var(--line)}
-.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line2);margin:22px 0}
-.tile{background:var(--surface);padding:22px 20px 24px}
-.tile .n{font-family:'Oswald',sans-serif;font-weight:200;font-size:38px;line-height:1;color:var(--tun)}
-.tile h4{font-family:'Oswald',sans-serif;font-weight:500;font-size:14px;letter-spacing:.16em;text-transform:uppercase;margin:12px 0 8px;line-height:1.3}
-.tile p{font-size:13.5px;line-height:1.55;color:var(--ink2)}
-.tile p b{color:var(--ink);font-weight:400}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line2);margin:22px 0}
-.grid2>div{background:var(--surface);padding:24px 24px 26px}
-.grid2 h4{font-family:'Oswald',sans-serif;font-weight:500;font-size:15px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
-.grid2 p{font-size:14px;line-height:1.6;color:var(--ink2);margin-bottom:8px}
-.grid2 p b{color:var(--ink);font-weight:400}
-.grid2 .q{font-family:'Oswald',sans-serif;font-weight:300;font-size:18px;letter-spacing:.04em;color:var(--ink);line-height:1.45;margin:4px 0 10px}
-table{width:100%;border-collapse:collapse;margin:14px 0 8px;font-size:13.5px}
-th{font-family:'Oswald',sans-serif;font-weight:400;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);text-align:left;padding:0 14px 12px 0;border-bottom:1px solid var(--line);vertical-align:bottom}
-td{padding:13px 14px 13px 0;border-bottom:1px solid var(--line2);vertical-align:top;color:var(--ink2);line-height:1.55}
-td.t{font-family:'Oswald',sans-serif;font-weight:300;font-size:14px;color:var(--tun);white-space:nowrap;letter-spacing:.04em}
-td.ours{color:var(--ink)}
-td.ours b{font-weight:500}
-td.how{color:var(--ink3);font-size:12.5px;white-space:nowrap}
-tr.sec td{background:var(--surface2);color:var(--tun);font-family:'Oswald',sans-serif;font-weight:500;letter-spacing:.2em;text-transform:uppercase;font-size:12px;padding:10px 12px;border-bottom:0}
-.beats{overflow-x:auto}
-.beats table{min-width:860px}
-.list{max-width:820px;margin:10px 0 0}
+.list{margin:6px 0 0}
 .list li{list-style:none;font-size:15px;line-height:1.6;color:var(--ink2);padding:9px 0 9px 18px;position:relative;border-bottom:1px solid var(--line2)}
 .list li::before{content:"";position:absolute;left:0;top:19px;width:7px;height:1px;background:var(--tun)}
 .list li b{color:var(--ink);font-weight:400}
-.vo{max-width:820px;background:var(--surface);border:1px solid var(--line2);padding:18px 24px;margin:16px 0}
-.vo div{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:9px 0;border-bottom:1px solid var(--line2);font-size:14.5px;line-height:1.55}
-.vo div:last-child{border-bottom:0}
-.vo span{font-family:'Oswald',sans-serif;font-weight:300;color:var(--tun);letter-spacing:.08em;font-size:13px;padding-top:2px}
-.vo i{font-style:normal;color:var(--ink)}
-footer{margin-top:80px;padding-top:24px;border-top:1px solid var(--line);font-family:'Oswald',sans-serif;font-weight:300;letter-spacing:.34em;font-size:12px;color:var(--ink3);display:flex;justify-content:space-between;text-transform:uppercase}
-@media (max-width:860px){body{padding:40px 18px 70px}.tiles{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}.strip{grid-template-columns:repeat(4,1fr)}.vo div{grid-template-columns:1fr;gap:4px}
-.beats table{min-width:0}.beats tr:first-child{display:none}.beats tr{display:block;border-bottom:1px solid var(--line2);padding:12px 0 14px}.beats tr.sec{padding:0;border-bottom:0;margin-top:10px}.beats td{display:block;border:0;padding:2px 0;white-space:normal}.beats td.t{padding-bottom:4px}.beats td:nth-child(2)::before{content:"Their beat: ";color:var(--ink3)}.beats td.how{padding-top:6px}}
+.beats{display:grid;gap:2px;background:var(--line2);margin-top:8px}
+.beat{background:var(--surface);padding:14px 18px;display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:start}
+.beat .t{font-family:'Oswald',sans-serif;font-weight:400;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--tun);padding-top:2px}
+.beat .t small{display:block;font-weight:300;letter-spacing:.06em;color:var(--ink3);font-size:12px;margin-top:4px;text-transform:none}
+.beat p{font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.beat p b{color:var(--ink);font-weight:400}
+footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);font-family:'Oswald',sans-serif;font-weight:300;letter-spacing:.34em;font-size:12px;color:var(--ink3);display:flex;justify-content:space-between;text-transform:uppercase}
+@media (max-width:640px){body{padding:40px 18px 60px}.beat{grid-template-columns:1fr;gap:6px}}
 </style></head><body><div class="wrap">
 
 <div class="wm">RENVIR<sup>®</sup></div>
-<div class="k">Concept · October 2026 · For review</div>
+<div class="k">Concept · October 2026</div>
 <h1>Up <b>close</b></h1>
-<p class="lead">A product film built the way the Dercos reel is built: <b>extreme macro, slow motion, one sound per cut, no story, no face.</b> Same grammar, our room. The three bottles are the only objects in frame and the only color is what comes out of them.</p>
+<p class="lead">Our version of <a href="https://www.instagram.com/p/DdZcX0dM-Qz/">the Vichy reel</a>. <b>Macro, slow motion, one sound per cut, no face.</b> Their room is a white lab. Ours is black glass. The three bottles are the only things in frame and the only color is what comes out of them.</p>
 
-<div class="fromrob"><b>From Rob</b>You liked the Vichy reel. I pulled it apart to see what it actually does, then rebuilt it for us shot by shot. Everything below is a plan, not footage. One tabletop day with the real product makes the regimen film, three short product films and a set of stills we can use everywhere. Nothing goes to camera until you say go.</div>
-
-<h2>01 · What the reference does</h2>
-<p class="p">The Vichy Dercos reel by Jaiden Wood runs <b>26 seconds across 23 shots.</b> The average shot is just over one second and nothing holds longer than 1.6 seconds until the final lineup. There is <b>no voiceover.</b> A slow ambient track sits underneath, and the real soundtrack is foley synced to every cut: the squelch of the drip, bubbling, lather, water, the squeeze from the tube, the click of the pump. The face appears once, at 22 seconds, eyes to camera, and then the three products stand in a line.</p>
-<div class="strip">
-<div><b>0.0</b><span>The drip bends light</span></div>
-<div><b>0.8</b><span>Bubbles, logo in</span></div>
-<div><b>1.8</b><span>Logo under liquid</span></div>
-<div><b>3.1</b><span>Hero one, slow push</span></div>
-<div><b>3.6</b><span>Hero two</span></div>
-<div><b>5.8</b><span>Water onto hair</span></div>
-<div><b>7.8</b><span>Foam macro</span></div>
-<div><b>10.5</b><span>Lather, rinse</span></div>
-<div><b>12.6</b><span>Product two</span></div>
-<div><b>14.6</b><span>Hero three, beaded</span></div>
-<div><b>16.1</b><span>The formula macro</span></div>
-<div><b>17.7</b><span>Pump to scalp</span></div>
-<div><b>22.7</b><span>The turn, the face</span></div>
-<div><b>24.3</b><span>The lineup</span></div>
-</div>
-<p class="credit">Timecodes from <a href="https://www.instagram.com/p/DdZcX0dM-Qz/">the reference reel</a> by Jaiden Wood (@wocostudios) for Vichy Dercos. Watch it there with sound on.</p>
-
-<div class="tiles">
-<div class="tile"><div class="n">23</div><h4>Shots in 26 seconds</h4><p>Nothing over 1.6 seconds until the lineup. Pace is the hook.</p></div>
-<div class="tile"><div class="n">0</div><h4>Words spoken</h4><p>No voiceover. Foley on every cut: drip, pump, lather, water, click.</p></div>
-<div class="tile"><div class="n">1</div><h4>Color</h4><p>The green. It is the bottle, and it is the abstract formula shot. Everything else is white.</p></div>
-<div class="tile"><div class="n">3</div><h4>Techniques</h4><p>Probe lens macro, slow motion on every liquid, bottles with water on them. That is the whole premium feel.</p></div>
-</div>
-
-<h2>02 · Why it fits us right now</h2>
-<div class="grid2">
-<div><h4>It makes the product the hero</h4><p>Your note on the ad bottles was fair. The fix is not AI cleanup. The fix is light, water, glass and a macro lens on the real jar. Every bottle in the Vichy reel looks expensive because of how it is shot, not because of the bottle.</p></div>
-<div><h4>It matches the positioning you sent Oct 8</h4><p>Ingredients and what they do, premium, strong black and white imagery, a clear reason to buy the complete system. The reel ends on the three product lineup. So does ours.</p></div>
-<div><h4>It needs no face</h4><p>Hands, a jaw, a neck, the back of a wet head. We change one shot: the smile at 22 seconds becomes a wiped mirror. Everything else already lives inside our rules.</p></div>
-<div><h4>It is cheap to make well</h4><p>No actor, no location, no travel. One table, one hard light, two sets of product and a half day. Macro liquids are the one thing that is cheaper to shoot than to generate, and better.</p></div>
-</div>
-
-<h2>03 · The idea</h2>
-<p class="big">Their room is a <b>white lab.</b> Ours is <b>black glass at six in the morning.</b></p>
-<p class="p">Wet black slate, black acrylic, one hard tungsten light from the side, water everywhere. The three black bottles are the only objects. The only color in the film is what comes out of them: the gray of Alpha Detox™ turning to white foam, the glow of Citrus Revive™ with light behind it, the white of Supercharger™ holding its peak. Where Vichy uses green, we use the liquid and the light. Carbon and tungsten, nothing else in the room.</p>
-<p class="p">The man is in it and never seen. Two hands, a jaw, a neck under running water, a towel on a shoulder. The Vichy reel turns on a smile to camera. Ours turns on a hand wiping steam off the mirror and the jaw in the glass, done for the day. Then the three stand in a line.</p>
-<p class="p">One sound per cut. The drop ticks, the pump clicks, the lid twists, water hits slate. Cut on the sound, not the picture. A low slow track underneath, closer to an engine at idle than a spa. No voice in the first version. A second version carries four lines in my voice for the people who watch with sound on.</p>
-
-<h2>04 · Beat by beat</h2>
-<p class="p">Twenty shots in 26 seconds. Their beat on the left, our shot in the middle, how we make it on the right. Timecodes are ours.</p>
-<div class="beats"><table>
-<tr><th>Time</th><th>Their beat</th><th>Our shot</th><th>How</th></tr>
-<tr class="sec"><td colspan="4">Hook</td></tr>
-<tr><td class="t">0.0 to 0.8</td><td>The drip bends light</td><td class="ours">One drop of Citrus Revive™ leaves the pump in slow motion. Black field, light behind it. The drop bends the tungsten into a lens.</td><td class="how">Practical · 120 fps</td></tr>
-<tr><td class="t">0.8 to 1.8</td><td>Bubbles, logo in</td><td class="ours">The drop lands in a shallow pool of serum on black glass. Rings spread. <b>Wordmark White with the registered R fades in top left and never leaves.</b></td><td class="how">Practical</td></tr>
-<tr><td class="t">1.8 to 3.0</td><td>Logo under liquid</td><td class="ours">Light through the serum. The dish tilts, the glow slides across black.</td><td class="how">Practical · glass dish, lamp behind</td></tr>
-<tr class="sec"><td colspan="4">Step one · Alpha Detox™</td></tr>
-<tr><td class="t">3.0 to 4.4</td><td>Hero one, foam on the bottle</td><td class="ours"><b>Alpha Detox™ hero.</b> The black bottle on wet slate, water running down it, slow push. Super: Charcoal. Willow bark. Rosemary.</td><td class="how">Practical · real bottle</td></tr>
-<tr><td class="t">4.4 to 5.4</td><td>Hand holds the bottle</td><td class="ours">A hand pumps once into a palm. The cleanser's own color against skin.</td><td class="how">Practical · real hands</td></tr>
-<tr><td class="t">5.4 to 6.4</td><td>Water onto hair</td><td class="ours">Cleanser meets water in the palm. Gray goes to foam.</td><td class="how">Practical</td></tr>
-<tr><td class="t">6.4 to 7.6</td><td>Fingers on the scalp</td><td class="ours">Two hands work foam up the jaw and neck, shot from below the chin. No eyes.</td><td class="how">Practical</td></tr>
-<tr><td class="t">7.6 to 8.6</td><td>Foam macro</td><td class="ours">Foam on skin, macro, bubbles going.</td><td class="how">Practical</td></tr>
-<tr><td class="t">8.6 to 9.9</td><td>Lather</td><td class="ours">Water hits the jaw. The foam leaves in one sheet.</td><td class="how">Practical · 120 fps</td></tr>
-<tr><td class="t">9.9 to 10.8</td><td>Rinse</td><td class="ours">Water sheets across black slate, lit from the side.</td><td class="how">Practical</td></tr>
-<tr class="sec"><td colspan="4">Step two · Citrus Revive™</td></tr>
-<tr><td class="t">10.8 to 12.2</td><td>Hero three, beaded</td><td class="ours"><b>Citrus Revive™ hero.</b> Beads of water on the black glass, slow push. Super: Vitamin C. Citrus stem cells.</td><td class="how">Practical · glycerin and water</td></tr>
-<tr><td class="t">12.2 to 13.0</td><td>Product two, squeeze</td><td class="ours">Two pumps onto fingertips.</td><td class="how">Practical</td></tr>
-<tr><td class="t">13.0 to 14.5</td><td>The formula macro</td><td class="ours">Light through the serum, slow rising bubbles. Their green, our tungsten. The one abstract shot in the film.</td><td class="how">Practical first · plate if it fails</td></tr>
-<tr><td class="t">14.5 to 15.7</td><td>Pump to scalp</td><td class="ours">Fingertips press serum into the cheek, three quarter from behind.</td><td class="how">Practical</td></tr>
-<tr><td class="t">15.7 to 16.7</td><td>Massage</td><td class="ours">The sheen on skin, macro, catching the light as it sinks in.</td><td class="how">Practical</td></tr>
-<tr class="sec"><td colspan="4">Step three · Supercharger™</td></tr>
-<tr><td class="t">16.7 to 18.1</td><td>Massage</td><td class="ours"><b>Supercharger™ hero.</b> The jar, the lid twisting off, one highlight on the cream. Super: Hyaluronic acid. Vitamin C. Chamomile.</td><td class="how">Practical · real jar</td></tr>
-<tr><td class="t">18.1 to 19.1</td><td>Massage</td><td class="ours">Two fingers take a swipe. The cream holds its peak.</td><td class="how">Practical</td></tr>
-<tr><td class="t">19.1 to 20.5</td><td>Massage</td><td class="ours">The cream spreads under a fingertip across skin, white to clear.</td><td class="how">Practical</td></tr>
-<tr class="sec"><td colspan="4">The turn and the lineup</td></tr>
-<tr><td class="t">20.5 to 23.0</td><td>Face turn, smile to camera</td><td class="ours"><b>The turn.</b> The lid clicks back on. A hand wipes steam off the mirror. In it, the jaw and the towel on the shoulder. Not the eyes. Done for the day.</td><td class="how">Practical</td></tr>
-<tr><td class="t">23.0 to 26.0</td><td>Lineup of three</td><td class="ours"><b>The three on black glass,</b> beaded, slow push. Supers: NEVER STOP.™ LOOKING YOUNGER. Then RENVIR® RENEWED MAN. Then renvirco.com.</td><td class="how">Practical</td></tr>
-</table></div>
-
-<h2>05 · What comes out of one day</h2>
-<div class="tiles">
-<div class="tile"><div class="n">1</div><h4>The regimen film</h4><p>26 seconds, 9:16 and 4:5. The ad for the Complete Face Regimen, which is where the spend goes.</p></div>
-<div class="tile"><div class="n">3</div><h4>Product films</h4><p>Alpha Detox™, Citrus Revive™, Supercharger™. Ten to twelve seconds each: hook, hero, the step, the lineup. Organic and stories.</p></div>
-<div class="tile"><div class="n">8</div><h4>Stills on black</h4><p>Each bottle beaded and lit, plus the lineup. Feed, site, Amazon if Ray wants them. This also fixes the bottles in every other ad.</p></div>
-<div class="tile"><div class="n">3</div><h4>Five second loops</h4><p>One hero loop per product for stories and the link sticker frames.</p></div>
-</div>
-<p class="p"><b>For Ray, as a recommendation:</b> the regimen film goes in as new creative on the routine campaign, judged on hook rate first, then landing page views, with the High Octane reel as the control. His call on placement and budget.</p>
-
-<h2>06 · Words on screen</h2>
-<p class="p">Every super is an ingredient name or a looks and feels line. Nothing else goes in the picture.</p>
+<h2>Why this one</h2>
 <ul class="list">
-<li><b>Alpha Detox™</b> Charcoal. Willow bark. Rosemary.</li>
-<li><b>Citrus Revive™</b> Vitamin C. Citrus stem cells.</li>
-<li><b>Supercharger™</b> Hyaluronic acid. Vitamin C. Chamomile.</li>
-<li><b>Close</b> NEVER STOP.™ LOOKING YOUNGER. / RENVIR® RENEWED MAN. / renvirco.com</li>
+<li><b>The bottles look expensive.</b> Light, water and a macro lens on the real jar. That is the answer to the bottles in the last ad.</li>
+<li><b>It is the Oct 8 positioning.</b> Ingredients, premium, black and white, and it ends on the complete system.</li>
+<li><b>It needs no face.</b> Hands, a jaw, a neck. The smile at the end becomes a wiped mirror.</li>
 </ul>
-<p class="p"><b>The claims gate.</b> The site today says "fights fine lines and wrinkles," "visibly reduces discoloration," "remove blackheads," "minimize the appearance of pores." None of that goes in the film until you or Ray confirm in writing which lines are substantiated for each product. Your Oct 8 note asks for the same thing, so this is us agreeing with you.</p>
 
-<h2>07 · Sound</h2>
-<p class="p"><b>Version one, no voice.</b> Foley recorded on the day, close, and cut to: the drop, the ring in the pool, the pump click, foam fizz, hands on skin, water on slate, the lid twist, the swipe, the lid click, the squeak of the mirror. Underneath, a licensed track at 70 to 80 BPM, a low sustained pad with a pulse, nothing bright, nothing spa. Each cut lands on a sound.</p>
-<p class="p"><b>Version two, four lines.</b> My voice, recorded raw, processed in the pipeline, levels verified before delivery at about minus 15 LUFS integrated with peaks under minus 1 dB.</p>
-<div class="vo">
-<div><span>Step one</span><i>Grime, sweat and grease don't rinse off with water. This does.</i></div>
-<div><span>Step two</span><i>Vitamin C. Two pumps. Thirty seconds.</i></div>
-<div><span>Step three</span><i>Seal it in.</i></div>
-<div><span>Close</span><i>Never stop. Looking younger. Renvir. Renewed man.</i></div>
+<h2>The film · 26 seconds</h2>
+<div class="beats">
+<div class="beat"><div class="t">Hook<small>0 to 3 sec</small></div><p>One drop of Citrus Revive™ leaves the pump in slow motion, black field, light behind it. It lands in a pool of serum on black glass. Wordmark in top left, stays.</p></div>
+<div class="beat"><div class="t">Alpha Detox™<small>3 to 11 sec</small></div><p><b>Hero:</b> the black bottle on wet slate, water running down it, slow push. Gray cleanser meets water and goes to foam. Two hands work it up the jaw. Water takes it off in one sheet. Super: Charcoal. Willow bark. Rosemary.</p></div>
+<div class="beat"><div class="t">Citrus Revive™<small>11 to 17 sec</small></div><p><b>Hero:</b> the bottle beaded with water. Light through the serum, bubbles rising. Two pumps, fingertips press it into the cheek, the sheen catches the light. Super: Vitamin C. Citrus stem cells.</p></div>
+<div class="beat"><div class="t">Supercharger™<small>17 to 21 sec</small></div><p><b>Hero:</b> the lid twists off, one highlight on the cream. Two fingers take a swipe, it holds its peak, spreads white to clear on skin. Super: Hyaluronic acid. Vitamin C. Chamomile.</p></div>
+<div class="beat"><div class="t">The turn<small>21 to 23 sec</small></div><p>Lid clicks back on. A hand wipes steam off the mirror. The jaw and a towel on the shoulder. Not the eyes.</p></div>
+<div class="beat"><div class="t">Lineup<small>23 to 26 sec</small></div><p>The three on black glass, beaded, slow push. NEVER STOP.™ LOOKING YOUNGER. Then RENVIR® RENEWED MAN. Then renvirco.com.</p></div>
 </div>
+<p class="p">Sound: no voice. Foley on every cut (drop, pump, foam, water, lid) over a low slow track. A four line VO version in my voice if we want it. Cutdowns: one 10 second piece per product from the same frames, plus the 4:5.</p>
 
-<h2>08 · How we shoot it</h2>
-<p class="p">This is the one film where the real thing is cheaper and better than generation. Generators get labels wrong, and they get the way a real drop bends light wrong. So the plan is practical first, with generation only as the fallback for the one abstract shot.</p>
-<div class="grid2">
-<div><h4>The table</h4><p>A sheet of black acrylic and a black slate tile. One hard light from the side with a snoot, black foam core to kill the spill. A clear glass dish for the light through the serum shots. A spray bottle and a dropper. Glycerin and water so the beads hold. A tripod.</p><p>Camera: iPhone at 4K 120 fps with a clip-on macro lens, or a mirrorless body with a 100mm macro. Either works at this distance. The whole kit is under two hundred dollars, one time, and it is inside the fee.</p></div>
-<div><h4>The product and the hands</h4><p>Two full sets. One set stays dry and perfect for the heroes and the lineup. One set gets pumped, wet and used. Labels checked letter by letter before anything is cut.</p><p>Real hands, no actor. Trimmed nails, no watch, no ring. Shot from the man's point of view or from the side so we see a jaw and a neck and nothing above.</p></div>
-<div><h4>If a plate has to be generated</h4><p>Only the abstract shots with no label and no skin in frame, which on this film means the rising bubble macro and nothing else. Live per run price stated before each roll, one roll per prompt, stop after three misses and rethink. Any jar motion is Kling 3.0 Pro with the jar layer frozen from the still. Still plates are Seedream 4. Skin contact is Veo 3.1 only and never in the same frame as the jar or the marks.</p></div>
-<div><h4>Marks, type, safe zones</h4><p>Renvir Wordmark White with the registered R, top left from frame one, never fades. TM on Alpha Detox, Citrus Revive, Supercharger and Never Stop. Oswald for supers, Inter for the small line. Everything kept out of the top 14 percent and the bottom third on 9:16, nothing below the footer. The 4:5 feed cut comes from the same frames with the supers moved up.</p></div>
-</div>
-<p class="p"><b>On black versus white.</b> Vichy is a lab, so white is their truth. White would make us read as a pharmacy brand and would fight every piece we have shipped. Black glass with tungsten keeps the same macro grammar and stays ours. If you want to see both, a white tile version is a second setup on the same day, same shots, about forty five minutes, and a cheap test.</p>
-
-<h2>09 · What I need from you</h2>
+<h2>How it gets built</h2>
 <ul class="list">
-<li><b>A yes on the direction.</b> Black room, no face, foley first, the regimen film leads.</li>
-<li><b>Two full sets of product</b> shipped to me. One stays perfect, one gets used.</li>
-<li><b>The claims list.</b> Which of the lines on the site are substantiated per product. Until then the film carries ingredient names only.</li>
-<li><b>Lead with the regimen or a single product?</b> My recommendation is the regimen film first, since the bundle is where the margin is, with the three product films behind it for organic.</li>
+<li><b>The jar is the real jar.</b> Packshot still, water beads added, slow pushes in Kling 3.0 Pro with the jar layer frozen.</li>
+<li><b>Liquid and texture plates generated.</b> The drop, the bubbles, the foam, the cream. No label in those frames. Seedream 4 stills, Kling 3.0 Pro for motion.</li>
+<li><b>Hands and jaw in Veo 3.1,</b> never in the same frame as the jar or the marks. Composited in After Effects.</li>
+<li><b>Words on screen are ingredient names only</b> until we have the list of which claims are substantiated per product.</li>
 </ul>
-<p class="p">Timing: shoot within a week of the product landing, first cut three days after, review page same day.</p>
+
+<h2>From you</h2>
+<p class="p">A yes on the direction, and the claims list. That is it.</p>
 
 <footer><span>Renvir</span><span>Renewed man</span></footer>
 </div></body></html>
